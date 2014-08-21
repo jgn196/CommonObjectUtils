@@ -15,7 +15,7 @@ namespace CommonObjectUtilsTests
         /// Tests comparing objects.
         /// </summary>
         [TestMethod]
-        public void Append()
+        public void EqualsBuilder_Append()
         {
             Assert.IsTrue(new EqualsBuilder().Append(true, true).IsEquals);
             Assert.IsTrue(new EqualsBuilder().Append(false, false).IsEquals);
@@ -44,7 +44,7 @@ namespace CommonObjectUtilsTests
         /// Tests comparing enumerable objects.
         /// </summary>
         [TestMethod]
-        public void AppendEnumerables()
+        public void EqualsBuilder_AppendEnumerables()
         {
             Assert.IsTrue(new EqualsBuilder().Append((bool[])null, (bool[])null).IsEquals);
             Assert.IsTrue(new EqualsBuilder().Append(new bool[] { true }, new bool[] { true }).IsEquals);
@@ -67,7 +67,7 @@ namespace CommonObjectUtilsTests
         /// Tests the AppendSuper method.
         /// </summary>
         [TestMethod]
-        public void AppendSuper()
+        public void EqualsBuilder_AppendSuper()
         {
             EqualsBuilder builder = new EqualsBuilder();
 
@@ -86,7 +86,7 @@ namespace CommonObjectUtilsTests
         /// Tests the Reset method.
         /// </summary>
         [TestMethod]
-        public void Reset()
+        public void EqualsBuilder_Reset()
         {
             EqualsBuilder builder = new EqualsBuilder();
             builder.AppendSuper(false);
