@@ -80,7 +80,7 @@ namespace CommonObjectUtils
         {
             if (left.Equals(right))
             {
-                throw new EqualsTestException(left.ToString() + " equals " + right.ToString());
+                throw new EqualsTestException(left.ToString() + " equals " + right);
             }
         }
 
