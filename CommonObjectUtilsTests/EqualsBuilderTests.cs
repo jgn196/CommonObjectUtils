@@ -3,7 +3,7 @@
 using CommonObjectUtils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CommonObjectUtilsTests
+namespace CommonObjectUtils.Tests
 {
     /// <summary>
     /// Tests the EqualsBuilder class.
