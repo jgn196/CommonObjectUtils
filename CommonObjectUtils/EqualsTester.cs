@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 using CuttingEdge.Conditions;
 
@@ -48,8 +50,10 @@ namespace CommonObjectUtils
         {
             SelfEqualityTest();
             NullEqualityTest();
+            HashCodeConsistencyTest();
             GroupEqualityTest();
             GroupInequalityTest();
+            GroupHashCodeEqualTest();
         }
 
         /// <summary>
@@ -64,7 +68,12 @@ namespace CommonObjectUtils
         {
             if (!left.Equals(right))
             {
-                throw new EqualsTestException(left.ToString() + " did not equal " + right.ToString());
+                throw new EqualsTestException(
+                    string.Format(
+                        CultureInfo.CurrentCulture,
+                        "{0} did not equal {1}",
+                        left,
+                        right));
             }
         }
 
@@ -80,7 +89,30 @@ namespace CommonObjectUtils
         {
             if (left.Equals(right))
             {
-                throw new EqualsTestException(left.ToString() + " equals " + right);
+                throw new EqualsTestException(
+                    string.Format(CultureInfo.CurrentCulture, "{0} equals {1}", left, right));
+            }
+        }
+
+        /// <summary>
+        /// Tests that two objects return the same hash code.
+        /// </summary>
+        /// <param name="left">The left hand object.</param>
+        /// <param name="right">The right hand object.</param>
+        private static void TestHashCodeEqual(object left, object right)
+        {
+            int leftHashCode = left.GetHashCode();
+            int rightHashCode = right.GetHashCode();
+            if (leftHashCode != rightHashCode)
+            {
+                throw new EqualsTestException(
+                    string.Format(
+                        CultureInfo.CurrentCulture,
+                        "{0} hash code ({1}) is not equal to {2} hash code ({3})",
+                        left,
+                        leftHashCode,
+                        right,
+                        rightHashCode));
             }
         }
 
@@ -180,6 +212,28 @@ namespace CommonObjectUtils
                         ForEachItemCombo(leftGroup, rightGroup, TestNotEqual);
                     }
                 });
+        }
+
+        /// <summary>
+        /// Tests that all items in each group return the same hash code.
+        /// </summary>
+        private void GroupHashCodeEqualTest()
+        {
+            ForEachGroup(group =>
+            {
+                if (group.Select(item => item.GetHashCode()).Distinct().Count() > 1)
+                {
+                    throw new EqualsTestException("Inconsistent hash code values in equality group.");
+                }
+            });
+        }
+
+        /// <summary>
+        /// Tests that all items return the same hash code if called twice.
+        /// </summary>
+        private void HashCodeConsistencyTest()
+        {
+            ForEachGroup(group => ForEachGroupItem(group, item => TestHashCodeEqual(item, item)));
         }
     }
 }
