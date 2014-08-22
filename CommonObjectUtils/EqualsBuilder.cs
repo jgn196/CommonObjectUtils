@@ -65,23 +65,28 @@ namespace CommonObjectUtils
         /// <returns>This EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
-            if (left == null || right == null)
+            bool result;
+
+            if (left == right)
             {
-                isEqual = isEqual && left == right;
+                result = true;
+            }
+            else if (left == null || right == null)
+            {
+                result = false;
             }
             else if (left.Count() != right.Count())
             {
-                isEqual = false;
+                result = false;
             }
             else
             {
-                var comparisons = left.Zip(right, (l, r) => l.Equals(r));
+                var deepEquals = left.Zip(right, (l, r) => l.Equals(r));
 
-                if (comparisons.Count(x => x) != left.Count())
-                {
-                    isEqual = false;
-                }
+                result = deepEquals.All(r => r);
             }
+
+            isEqual = isEqual && result;
 
             return this;
         }
