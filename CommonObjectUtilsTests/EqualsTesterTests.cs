@@ -1,6 +1,6 @@
 ﻿using System;
 
-using CommonObjectUtils;
+using CommonObjectUtils.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CommonObjectUtilsTests

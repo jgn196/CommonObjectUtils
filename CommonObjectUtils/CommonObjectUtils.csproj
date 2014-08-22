@@ -51,8 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EqualsBuilder.cs" />
-    <Compile Include="EqualsTester.cs" />
-    <Compile Include="EqualsTestException.cs" />
+    <Compile Include="Testing\EqualsTester.cs" />
+    <Compile Include="Testing\EqualsTestException.cs" />
     <Compile Include="HashCodeBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
