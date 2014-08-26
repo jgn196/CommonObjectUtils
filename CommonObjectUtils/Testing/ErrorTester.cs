@@ -36,10 +36,11 @@ namespace CommonObjectUtils.Testing
             Condition.Requires(expectedException).IsNotNull();
             Condition.Requires(action).IsNotNull();
 
+            bool actionSuccessful = false;
             try
             {
                 action.Invoke();
-                throw new ErrorTestException("Expected " + expectedException.Name + " exception");
+                actionSuccessful = true;
             }
             catch (Exception error)
             {
@@ -48,6 +49,11 @@ namespace CommonObjectUtils.Testing
                     throw new ErrorTestException("Expected " + expectedException.Name + " exception but got "
                         + error.GetType().Name);
                 }
+            }
+
+            if (actionSuccessful)
+            {
+                throw new ErrorTestException("Expected " + expectedException.Name + " exception");
             }
 
             return this;
