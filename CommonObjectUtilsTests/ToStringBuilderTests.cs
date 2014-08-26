@@ -67,6 +67,15 @@ namespace CommonObjectUtils.Tests
             Assert.AreEqual(
                 "ToStringBuilderTests[Foo={1, 2}]",
                 new ToStringBuilder(this).AppendMany("Foo", new HashSet<int>() { 1, 2 }).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[base=null]",
+                new ToStringBuilder(this).AppendBase(null).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[base=]",
+                new ToStringBuilder(this).AppendBase(string.Empty).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[base= ]",
+                new ToStringBuilder(this).AppendBase(" ").ToString());
         }
     }
 }

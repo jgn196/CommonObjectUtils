@@ -84,6 +84,20 @@ namespace CommonObjectUtils
         }
 
         /// <summary>
+        /// Append a base class string representation.
+        /// </summary>
+        /// <param name="baseValue">The base class representation.</param>
+        /// <returns>This ToStringBuilder to chain calls.</returns>
+        public ToStringBuilder AppendBase(string baseValue)
+        {
+            StartWritingField();
+
+            builder.Append(string.Format(CultureInfo.CurrentCulture, "base={0}", baseValue ?? "null"));
+
+            return this;
+        }
+
+        /// <summary>
         /// Gets the built string representation.
         /// </summary>
         /// <returns>The string.</returns>
