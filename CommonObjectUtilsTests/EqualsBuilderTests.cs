@@ -46,21 +46,21 @@ namespace CommonObjectUtils.Tests
         [TestMethod]
         public void EqualsBuilder_AppendEnumerables()
         {
-            Assert.IsTrue(new EqualsBuilder().Append((bool[])null, (bool[])null).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(new bool[] { true }, new bool[] { true }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(new bool[] { false }, new bool[] { false }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(new bool[] { true, true }, new bool[] { true, true }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(new bool[] { false, false }, new bool[] { false, false }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(new bool[0], new bool[0]).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany((bool[])null, (bool[])null).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { true }, new bool[] { true }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { false }, new bool[] { false }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { true, true }, new bool[] { true, true }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { false, false }, new bool[] { false, false }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[0], new bool[0]).IsEquals);
 
-            Assert.IsTrue(new EqualsBuilder().Append((IEnumerable<bool>)new List<bool>() { true }, new List<bool>() { true }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new List<bool>() { true }, new List<bool>() { true }).IsEquals);
 
-            Assert.IsTrue(new EqualsBuilder().Append((IEnumerable<bool>)new HashSet<bool>() { true }, new HashSet<bool>() { true }).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().AppendMany(new HashSet<bool>() { true }, new HashSet<bool>() { true }).IsEquals);
 
-            Assert.IsFalse(new EqualsBuilder().Append(new bool[] { true }, null).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append(null, new bool[] { true }).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append(new bool[] { true }, new bool[] { true, true }).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append(new bool[] { true, true }, new bool[] { true, false }).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true }, null).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(null, new bool[] { true }).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true }, new bool[] { true, true }).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true, true }, new bool[] { true, false }).IsEquals);
         }
 
         /// <summary>

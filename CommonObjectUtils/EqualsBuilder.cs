@@ -45,25 +45,13 @@ namespace CommonObjectUtils
         }
 
         /// <summary>
-        /// Does a deep comparison of two arrays containing the same type.
-        /// </summary>
-        /// <typeparam name="T">The type the arrays contain.</typeparam>
-        /// <param name="left">The left hand array.</param>
-        /// <param name="right">The right hand array.</param>
-        /// <returns>This EqualsBuilder for chaining calls.</returns>
-        public EqualsBuilder Append<T>(T[] left, T[] right) where T : IEquatable<T>
-        {
-            return Append((IEnumerable<T>)left, (IEnumerable<T>)right);
-        }
-
-        /// <summary>
         /// Does a deep comparison of two enumerable objects containing the same type.
         /// </summary>
         /// <typeparam name="T">The type the enumerable objects contain.</typeparam>
         /// <param name="left">The left hand enumerable.</param>
         /// <param name="right">The right hand enumerable.</param>
         /// <returns>This EqualsBuilder for chaining calls.</returns>
-        public EqualsBuilder Append<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
+        public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
             bool result;
 
