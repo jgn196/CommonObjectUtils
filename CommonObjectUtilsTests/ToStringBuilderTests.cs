@@ -2,6 +2,7 @@
 
 using CommonObjectUtils.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace CommonObjectUtils.Tests
 {
@@ -56,10 +57,16 @@ namespace CommonObjectUtils.Tests
                 new ToStringBuilder(this).Append("Foo", 1).Append("Bar", 2).ToString());
             Assert.AreEqual(
                 "ToStringBuilderTests[Foo={1, 2}]",
-                new ToStringBuilder(this).Append("Foo", new int[] { 1, 2 }).ToString());
+                new ToStringBuilder(this).AppendMany("Foo", new int[] { 1, 2 }).ToString());
             Assert.AreEqual(
                 "ToStringBuilderTests[Foo=null]",
-                new ToStringBuilder(this).Append("Foo", (int[])null).ToString());
+                new ToStringBuilder(this).AppendMany("Foo", (int[])null).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[Foo={1, 2}]",
+                new ToStringBuilder(this).AppendMany("Foo", new List<int>() { 1, 2 }).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[Foo={1, 2}]",
+                new ToStringBuilder(this).AppendMany("Foo", new HashSet<int>() { 1, 2 }).ToString());
         }
     }
 }

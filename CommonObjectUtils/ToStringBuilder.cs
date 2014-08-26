@@ -60,25 +60,13 @@ namespace CommonObjectUtils
         }
 
         /// <summary>
-        /// Append an array field to the string representation.
-        /// </summary>
-        /// <typeparam name="T">The type of items in the field array.</typeparam>
-        /// <param name="fieldName">The field name.</param>
-        /// <param name="field">The field value.</param>
-        /// <returns>This ToStringBuilder to chain calls.</returns>
-        public ToStringBuilder Append<T>(string fieldName, T[] field)
-        {
-            return Append(fieldName, field as IEnumerable<T>);
-        }
-
-        /// <summary>
         /// Append an enumerable field to the string representation.
         /// </summary>
         /// <typeparam name="T">The type of items in the field.</typeparam>
         /// <param name="fieldName">The field name.</param>
         /// <param name="field">The field value.</param>
         /// <returns>This ToStringBuilder to chain calls.</returns>
-        public ToStringBuilder Append<T>(string fieldName, IEnumerable<T> field)
+        public ToStringBuilder AppendMany<T>(string fieldName, IEnumerable<T> field)
         {
             Condition.Requires(fieldName).IsNotNullOrWhiteSpace();
 
