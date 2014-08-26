@@ -54,6 +54,12 @@ namespace CommonObjectUtils.Tests
             Assert.AreEqual(
                 "ToStringBuilderTests[Foo=1, Bar=2]",
                 new ToStringBuilder(this).Append("Foo", 1).Append("Bar", 2).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[Foo={1, 2}]",
+                new ToStringBuilder(this).Append("Foo", new int[] { 1, 2 }).ToString());
+            Assert.AreEqual(
+                "ToStringBuilderTests[Foo=null]",
+                new ToStringBuilder(this).Append("Foo", (int[])null).ToString());
         }
     }
 }

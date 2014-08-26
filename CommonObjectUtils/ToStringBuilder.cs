@@ -51,17 +51,45 @@ namespace CommonObjectUtils
         {
             Condition.Requires(fieldName).IsNotNullOrWhiteSpace();
 
-            if (!hasFields)
-            {
-                builder.Append("[");
-                hasFields = true;
-            }
-            else
-            {
-                builder.Append(", ");
-            }
+            StartWritingField();
 
             string fieldValue = field == null ? "null" : field.ToString();
+            builder.Append(string.Format(CultureInfo.CurrentCulture, "{0}={1}", fieldName, fieldValue));
+
+            return this;
+        }
+
+        /// <summary>
+        /// Append an array field to the string representation.
+        /// </summary>
+        /// <typeparam name="T">The type of items in the field array.</typeparam>
+        /// <param name="fieldName">The field name.</param>
+        /// <param name="field">The field value.</param>
+        /// <returns>This ToStringBuilder to chain calls.</returns>
+        public ToStringBuilder Append<T>(string fieldName, T[] field)
+        {
+            return Append(fieldName, field as IEnumerable<T>);
+        }
+
+        /// <summary>
+        /// Append an enumerable field to the string representation.
+        /// </summary>
+        /// <typeparam name="T">The type of items in the field.</typeparam>
+        /// <param name="fieldName">The field name.</param>
+        /// <param name="field">The field value.</param>
+        /// <returns>This ToStringBuilder to chain calls.</returns>
+        public ToStringBuilder Append<T>(string fieldName, IEnumerable<T> field)
+        {
+            Condition.Requires(fieldName).IsNotNullOrWhiteSpace();
+
+            StartWritingField();
+
+            string fieldValue = "null";
+            if (field != null)
+            {
+                fieldValue = "{" + string.Join(", ", field.Select(x => x.ToString()).ToArray()) + "}";
+            }
+
             builder.Append(string.Format(CultureInfo.CurrentCulture, "{0}={1}", fieldName, fieldValue));
 
             return this;
@@ -80,6 +108,23 @@ namespace CommonObjectUtils
             else
             {
                 return builder.ToString();
+            }
+        }
+
+        /// <summary>
+        /// If this is the first field being written this method writes the opening '[' character
+        /// otherwise it writes the separating ", " string.
+        /// </summary>
+        private void StartWritingField()
+        {
+            if (!hasFields)
+            {
+                builder.Append("[");
+                hasFields = true;
+            }
+            else
+            {
+                builder.Append(", ");
             }
         }
     }
