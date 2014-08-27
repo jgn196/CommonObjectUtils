@@ -14,3 +14,6 @@ In addition, the project also contains the following classes to support common o
 
 * EqualsTester
 * ErrorTester
+
+For much more detailed information build the CommonObjectUtilsHelp Visual Studio help project in
+the solution.
