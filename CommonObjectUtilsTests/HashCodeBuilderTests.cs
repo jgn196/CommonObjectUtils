@@ -50,7 +50,7 @@ namespace Capgemini.CommonObjectUtils.Tests
         [TestMethod]
         public void HashCodeBuilder_AppendSuper()
         {
-            Assert.AreEqual(632, new HashCodeBuilder().AppendSuper(3).GetHashCode());
+            Assert.AreEqual(632, new HashCodeBuilder().AppendBase(3).GetHashCode());
         }
 
         /// <summary>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="dcab8a25-c58b-43a3-ba17-28ec080e8ca4" visible="True" isDefault="true" title="Welcome to the CommonObjectUtils">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="7bcc2781-362c-45c5-b568-703b27eb172f" visible="True" isSelected="true" title="Version 1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>

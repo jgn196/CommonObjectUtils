@@ -7,8 +7,35 @@ using System.Threading.Tasks;
 namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
-    /// A port of the Apache Commons HashCodeBuilder utility class.
+    /// A class used to generate hash codes from object field values inside the <c>GetHashCode</c> method.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class allows you to add field to the hash code calculation in a fluent style.
+    /// </para>
+    /// <para>
+    /// This is a partial port of the Apache Commons HashCodeBuilder utility class.
+    /// </para>
+    /// <example>
+    /// <code>
+    /// class Foo 
+    /// {
+    ///     private int field1;
+    ///     private int[] field2;
+    ///     
+    ///     ...
+    /// 
+    ///     public override int GetHashCode()
+    ///     {
+    ///         return new HashCodeBuilder()
+    ///             .Append(field1)
+    ///             .AppendMany(field2)
+    ///             .GetHashCode();
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
+    /// </remarks>
     public class HashCodeBuilder
     {
         /// <summary>
@@ -33,7 +60,7 @@ namespace Capgemini.CommonObjectUtils
         /// Initializes a new instance of the <see cref="HashCodeBuilder"/> class.
         /// </summary>
         /// <param name="initialOddNumber">The initial hash code value.</param>
-        /// <param name="multiplierOddNumber">The value to multiply the hash code by as field values are added.</param>
+        /// <param name="multiplierOddNumber">The value to multiply the hash code by as field values are appended.</param>
         public HashCodeBuilder(int initialOddNumber, int multiplierOddNumber)
         {
             hashCode = initialOddNumber;
@@ -43,8 +70,13 @@ namespace Capgemini.CommonObjectUtils
         /// <summary>
         /// Appends the field to the hash code calculation.
         /// </summary>
+        /// <remarks>
+        /// Don't pass arrays, lists or other collections to this method as the top level objects will be hashed rather than
+        /// the contents. Instead call <see cref="Append<T>(ICollection<T>)"/>.
+        /// </remarks>
+        /// <seealso cref="Append<T>(ICollection<T>)"/>
         /// <param name="value">The field to append.</param>
-        /// <returns>This HashCodeBuilder for chaining calls.</returns>
+        /// <returns>The HashCodeBuilder for chaining calls.</returns>
         public HashCodeBuilder Append(object value)
         {
             if (value != null)
@@ -60,7 +92,7 @@ namespace Capgemini.CommonObjectUtils
         /// </summary>
         /// <typeparam name="T">The type of objects held in the collection field.</typeparam>
         /// <param name="values">The collection field</param>
-        /// <returns>This HashCodeBuilder for chaining calls.</returns>
+        /// <returns>The HashCodeBuilder for chaining calls.</returns>
         public HashCodeBuilder Append<T>(ICollection<T> values)
         {
             if (values != null)
@@ -75,24 +107,29 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
-        /// Appends the result of the super GetHashCode method.
+        /// Appends the result of the <c>base.GetHashCode</c> method.
         /// </summary>
-        /// <param name="superHashCode">The result of the super.GetHashCode method.</param>
-        /// <returns>This HashCodeBuilder for chaining calls.</returns>
-        public HashCodeBuilder AppendSuper(int superHashCode)
+        /// <param name="baseHashCode">The result of the <c>base.GetHashCode</c> method.</param>
+        /// <returns>The HashCodeBuilder for chaining calls.</returns>
+        public HashCodeBuilder AppendBase(int baseHashCode)
         {
-            hashCode = (hashCode * multiplierOddNumber) + superHashCode;
+            hashCode = (hashCode * multiplierOddNumber) + baseHashCode;
 
             return this;
         }
 
         /// <summary>
         /// Gets the hash code computed for the fields supplied to this object.
+        /// </summary>
+        /// <remarks>
         /// <para>
         /// Note that this breaks the normal usage of GetHashCode because it doesn't return the hash code
-        /// of this object.
+        /// of this object, it returns the calculated hash code of the fields that have been appended.
         /// </para>
-        /// </summary>
+        /// <para>
+        /// This means that objects of this class should never be put into hash sets or other collections that rely
+        /// on the <c>GetHashCode</c> contract.</para>
+        /// </remarks>
         /// <returns>The computed hash code.</returns>
         public override int GetHashCode()
         {

@@ -73,11 +73,11 @@ namespace Capgemini.CommonObjectUtils.Tests
 
             Assert.IsTrue(builder.IsEquals);
 
-            builder.AppendSuper(true);
+            builder.AppendBase(true);
 
             Assert.IsTrue(builder.IsEquals);
 
-            builder.AppendSuper(false);
+            builder.AppendBase(false);
 
             Assert.IsFalse(builder.IsEquals);
         }
@@ -89,7 +89,7 @@ namespace Capgemini.CommonObjectUtils.Tests
         public void EqualsBuilder_Reset()
         {
             EqualsBuilder builder = new EqualsBuilder();
-            builder.AppendSuper(false);
+            builder.AppendBase(false);
 
             Assert.IsFalse(builder.IsEquals);
 

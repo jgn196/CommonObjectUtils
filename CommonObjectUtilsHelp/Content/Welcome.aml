@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="dcab8a25-c58b-43a3-ba17-28ec080e8ca4" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        This library provides support classes (that have been partially ported or inspired by the corresponding
+        classes in the Apache Commons project) to help write the common .Net object methods.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Getting Started</title>
+      <content>
+        <para>
+          You can use the following classes to help you write common object methods:
+        </para>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="false">
+                T:Capgemini.CommonObjectUtils.EqualsBuilder
+              </codeEntityReference>
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="false">T:Capgemini.CommonObjectUtils.HashCodeBuilder</codeEntityReference>
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="false">T:Capgemini.CommonObjectUtils.ToStringBuilder</codeEntityReference>
+            </para>
+          </listItem>
+        </list>
+
+        <para>
+          You can use the following classes to help you write common unit tests:
+        </para>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="false">T:Capgemini.CommonObjectUtils.Testing.EqualsTester</codeEntityReference>
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="false">T:Capgemini.CommonObjectUtils.Testing.ErrorTester</codeEntityReference>
+            </para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

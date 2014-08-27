@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        This section describe the changes made to the CommonObjectUtils over the life of the project.
+      </para>
+    </introduction>
+
+    <section>
+			<title>Version History</title>
+			<content>
+				<para>Select a version below to see a description of its changes.</para>
+
+				<list class="bullet">
+					<listItem>
+						<para><link xlink:href="7bcc2781-362c-45c5-b568-703b27eb172f" /></para>
+					</listItem>
+				</list>
+
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="dcab8a25-c58b-43a3-ba17-28ec080e8ca4" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
-    /// An exception that is thrown when the EqualsTester finds breaches of the Equals() method contract.
+    /// An exception that is thrown when the EqualsTester finds breaches of the <c>Equals</c> or <c>GetHashCode</c> method contracts.
     /// </summary>
     [Serializable]
     public class EqualsTestException : Exception

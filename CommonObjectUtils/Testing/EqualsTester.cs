@@ -8,8 +8,24 @@ using CuttingEdge.Conditions;
 namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
-    /// A class for testing an object's implementation of the Equals() and GetHashCode() methods.
+    /// A class for testing an object's implementation of the <c>Equals</c> and <c>GetHashCode</c> methods.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class allows you to add groups of objects that should be equal in a fluent style.
+    /// </para>
+    /// <para>
+    /// This is a partial port of the Guava <c>EqualsTester</c> class.
+    /// </para>
+    /// <example>
+    /// <code>
+    /// new EqualsTester()
+    ///     .AddEqualityGroup("hello", "h" + "ello")
+    ///     .AddEqualityGroup(3, 1 + 2)
+    ///     .TestEquals();
+    /// </code>
+    /// </example>
+    /// </remarks>
     public class EqualsTester
     {
         /// <summary>
@@ -23,7 +39,7 @@ namespace Capgemini.CommonObjectUtils.Testing
         /// <param name="groupItems">
         /// A set of objects that should all be equal according to the Equals() method.
         /// </param>
-        /// <returns>This EqualsTester for chaining calls.</returns>
+        /// <returns>The EqualsTester for chaining calls.</returns>
         public EqualsTester AddEqualityGroup(params object[] groupItems)
         {
             Condition.Requires(groupItems)
@@ -37,12 +53,19 @@ namespace Capgemini.CommonObjectUtils.Testing
         }
 
         /// <summary>
-        /// Tests that:
-        /// <list>
-        /// <item>All items in the tester equal themselves.</item>
-        /// <item>All items in the tester do not equal null.</item>
-        /// </list>
+        /// Tests the correct equality of the added items.
         /// </summary>
+        /// <remarks>
+        /// The method makes the following checks.
+        /// <list type="bullet">
+        /// <item>All items in the tester equal themselves.</item>
+        /// <item>None of the items in the tester equal null.</item>
+        /// <item>All items in each equality group equal each other.</item>
+        /// <item>None of the items equal an item in any other equality group.</item>
+        /// <item>All items in each equality group have the same hash code.</item>
+        /// <item>All items return the same hash code if called more than once.</item>
+        /// </list>
+        /// </remarks>
         /// <exception cref="EqualsTestException">
         /// One of the tests failed.
         /// </exception>        

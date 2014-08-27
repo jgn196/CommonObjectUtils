@@ -10,9 +10,24 @@ using CuttingEdge.Conditions;
 namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
-    /// A test utility to make testing many actions that are supposed to throw an exception
-    /// in a single unit test.
+    /// A class that tests that actions throw expected exceptions.
     /// </summary>
+    /// <remarks>
+    /// You can use this class (as an alternative to the <c>ExpectedException</c> attribute) when you have several 
+    /// test cases that should all throw an exception and you want to group them together into a single unit test method.
+    /// </remarks>
+    /// <example>
+    /// <code>
+    /// [TestMethod]
+    /// public void MyNullArgumentTest() 
+    /// {
+    ///     ...
+    ///     new ErrorTester()
+    ///         .Test(typeof(ArgumentNullException), () => {myObj.myMethod(null, "1");})
+    ///         .Test(typeof(ArgumentNullException), () => {myObj.myMethod("2", null);});
+    /// }
+    /// </code>
+    /// </example>
     public class ErrorTester
     {
         /// <summary>
@@ -20,7 +35,10 @@ namespace Capgemini.CommonObjectUtils.Testing
         /// </summary>
         /// <param name="expectedException">The type of exception that is expected.</param>
         /// <param name="action">The action to perform.</param>
-        /// <returns>This ErrorTester for chaining calls.</returns>
+        /// <returns>The ErrorTester for chaining calls.</returns>
+        /// <exception cref="ErrorTestException">
+        /// Either no exception was thrown by the action or the exception was a different type to the expected one.
+        /// </exception>
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Microsoft.Design",
             "CA1062:Validate arguments of public methods",

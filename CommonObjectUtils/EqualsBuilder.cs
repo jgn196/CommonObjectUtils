@@ -7,8 +7,37 @@ using System.Threading.Tasks;
 namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
-    /// A port of the Apache Commons EqualsBuilder utility class.
+    /// A class used to compare object field values inside the <c>Equals</c> method.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class allows you to compare multiple fields in your class in a fluent style.
+    /// </para>
+    /// <para>
+    /// This is a partial port of the Apache Commons EqualsBuilder class.
+    /// </para>
+    /// <example>
+    /// <code>
+    /// class Foo 
+    /// {
+    ///     private int field1;
+    ///     private int[] field2;
+    ///     
+    ///     ...
+    /// 
+    ///     public override bool Equals(object obj)
+    ///     {
+    ///         ...
+    ///         MyClass other = obj as MyClass;
+    ///         return new EqualsBuilder()
+    ///             .Append(field1, other.field1)
+    ///             .AppendMany(field2, other.field2)
+    ///             .IsEquals;
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
+    /// </remarks>
     public class EqualsBuilder
     {
         /// <summary>
@@ -20,8 +49,9 @@ namespace Capgemini.CommonObjectUtils
         private bool isEqual = true;
 
         /// <summary>
-        /// Gets a value indicating whether the fields that have been checked were equal.
+        /// Gets the equality value.
         /// </summary>
+        /// <value>Indicates whether the fields that have been appended were all equal.</value>
         public bool IsEquals
         {
             get
@@ -31,12 +61,16 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
-        /// Compares two objects that implement <c>IEquatable</c> interface.
+        /// Appends two objects that implement the <c>IEquatable</c> interface to the list of values to compare.
         /// </summary>
+        /// <remarks>
+        /// Don't pass arrays, lists or other collections to this method as the top level objects will be compared rather than
+        /// the contents. Instead call <see cref="AppendMany"/>.</remarks>
+        /// <seealso cref="AppendMany"/>
         /// <typeparam name="T">The type of the objects.</typeparam>
         /// <param name="left">The left hand object.</param>
         /// <param name="right">The right hand object.</param>
-        /// <returns>This EqualsBuilder for chaining calls.</returns>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right) where T : IEquatable<T>
         {
             isEqual = isEqual && left.Equals(right);
@@ -45,12 +79,15 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
-        /// Does a deep comparison of two enumerable objects containing the same type.
+        /// Appends two enumerable objects that contain the same (<c>IEquatable</c>) type to the list of values to compare.
         /// </summary>
+        /// <remarks>
+        /// EqualsBuilder will perform a deep comparison of the two enumerable objects.
+        /// </remarks>
         /// <typeparam name="T">The type the enumerable objects contain.</typeparam>
         /// <param name="left">The left hand enumerable.</param>
         /// <param name="right">The right hand enumerable.</param>
-        /// <returns>This EqualsBuilder for chaining calls.</returns>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
             bool result;
@@ -80,19 +117,19 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
-        /// Adds the result of super.Equals().
+        /// Appends the result of <c>base.Equals</c>.
         /// </summary>
-        /// <param name="superEquals">The result of super.Equals().</param>
-        /// <returns>This EqualsBuilder for chaining calls.</returns>
-        public EqualsBuilder AppendSuper(bool superEquals)
+        /// <param name="baseEquals">The result of base.Equals.</param>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
+        public EqualsBuilder AppendBase(bool baseEquals)
         {
-            isEqual = isEqual && superEquals;
+            isEqual = isEqual && baseEquals;
 
             return this;
         }
 
         /// <summary>
-        /// Reset the EqualsBuilder so that it can be used again.
+        /// Resets the EqualsBuilder so that it can be used again.
         /// </summary>
         public void Reset()
         {

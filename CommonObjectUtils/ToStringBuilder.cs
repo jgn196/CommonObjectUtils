@@ -10,8 +10,45 @@ using CuttingEdge.Conditions;
 namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
-    /// A port of the Apache commons ToStringBuilder class.
+    /// A class used to generate string representations of objects for debugging purposes in the <c>ToString</c> method.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Strings built by this class start with the subject object's (short) class name. If fields are appended, the class 
+    /// name will be followed by an square bracket delimited list of the fields. Each field will be represented by its
+    /// name followed by an equals sign and then its value. The text "null" follows the equals sign if a field is null.
+    /// A brace delimited list of values follows the equals sign if a field is a collection.
+    /// </para>
+    /// <para>
+    /// This class allows you to append fields to the string in a fluent style.
+    /// </para>
+    /// <para>
+    /// This is a partial port of the Apache commons ToStringBuilder class.
+    /// </para>
+    /// <example>
+    /// <code>
+    /// class Foo 
+    /// {
+    ///     private int field1 = "bar";
+    ///     private int[] field2 = new int[]{1, 2};
+    ///     
+    ///     ...
+    /// 
+    ///     public override string ToString()
+    ///     {
+    ///         return new ToStringBuilder(this)
+    ///             .Append("field1", field1)
+    ///             .AppendMany("field2", field2)
+    ///             .ToString();
+    ///     }
+    /// }
+    /// </code>
+    /// This would produce the following output:
+    /// <code>
+    /// Foo[field1=bar, field2={1, 2}]
+    /// </code>
+    /// </example>
+    /// </remarks>
     public class ToStringBuilder
     {
         /// <summary>
@@ -46,7 +83,7 @@ namespace Capgemini.CommonObjectUtils
         /// <typeparam name="T">The field type.</typeparam>
         /// <param name="fieldName">The field name.</param>
         /// <param name="field">The field value.</param>
-        /// <returns>This ToStringBuilder to chain calls.</returns>
+        /// <returns>The ToStringBuilder to chain calls.</returns>
         public ToStringBuilder Append<T>(string fieldName, T field)
         {
             Condition.Requires(fieldName).IsNotNullOrWhiteSpace();
@@ -65,7 +102,7 @@ namespace Capgemini.CommonObjectUtils
         /// <typeparam name="T">The type of items in the field.</typeparam>
         /// <param name="fieldName">The field name.</param>
         /// <param name="field">The field value.</param>
-        /// <returns>This ToStringBuilder to chain calls.</returns>
+        /// <returns>The ToStringBuilder to chain calls.</returns>
         public ToStringBuilder AppendMany<T>(string fieldName, IEnumerable<T> field)
         {
             Condition.Requires(fieldName).IsNotNullOrWhiteSpace();
@@ -87,7 +124,7 @@ namespace Capgemini.CommonObjectUtils
         /// Append a base class string representation.
         /// </summary>
         /// <param name="baseValue">The base class representation.</param>
-        /// <returns>This ToStringBuilder to chain calls.</returns>
+        /// <returns>The ToStringBuilder to chain calls.</returns>
         public ToStringBuilder AppendBase(string baseValue)
         {
             StartWritingField();
