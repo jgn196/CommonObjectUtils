@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using CuttingEdge.Conditions;
 
-namespace CommonObjectUtils
+namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
     /// A port of the Apache commons ToStringBuilder class.

@@ -7,7 +7,7 @@
     <ProjectGuid>{D254159E-B3C4-4E42-B0C4-8A4CA1200A66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommonObjectUtils</RootNamespace>
+    <RootNamespace>Capgemini.CommonObjectUtils</RootNamespace>
     <AssemblyName>CommonObjectUtils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

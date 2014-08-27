@@ -1,10 +1,10 @@
 ﻿using System;
-
-using CommonObjectUtils.Testing;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace CommonObjectUtils.Tests
+using Capgemini.CommonObjectUtils.Testing;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Capgemini.CommonObjectUtils.Tests
 {
     /// <summary>
     /// Tests the ToStringBuilder class.

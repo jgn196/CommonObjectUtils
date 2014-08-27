@@ -6,7 +6,7 @@
     <ProjectGuid>{C38F5A14-69F5-4CEB-9C12-618C202DC2AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommonObjectUtils.Tests</RootNamespace>
+    <RootNamespace>Capgemini.CommonObjectUtils.Tests</RootNamespace>
     <AssemblyName>CommonObjectUtilsTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

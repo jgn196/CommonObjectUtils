@@ -5,7 +5,7 @@ using System.Linq;
 
 using CuttingEdge.Conditions;
 
-namespace CommonObjectUtils.Testing
+namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
     /// A class for testing an object's implementation of the Equals() and GetHashCode() methods.

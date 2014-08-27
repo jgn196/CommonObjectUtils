@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommonObjectUtils.Testing
+namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
     /// An exception that is thrown when the EqualsTester finds breaches of the Equals() method contract.

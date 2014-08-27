@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using CuttingEdge.Conditions;
 
-namespace CommonObjectUtils.Testing
+namespace Capgemini.CommonObjectUtils.Testing
 {
     /// <summary>
     /// A test utility to make testing many actions that are supposed to throw an exception

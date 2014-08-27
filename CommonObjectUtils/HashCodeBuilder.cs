@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommonObjectUtils
+namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
     /// A port of the Apache Commons HashCodeBuilder utility class.

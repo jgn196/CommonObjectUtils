@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-using CommonObjectUtils;
+using Capgemini.CommonObjectUtils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CommonObjectUtils.Tests
+namespace Capgemini.CommonObjectUtils.Tests
 {
     /// <summary>
     /// Tests the EqualsBuilder class.

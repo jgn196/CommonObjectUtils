@@ -1,9 +1,9 @@
 ﻿using System;
 
-using CommonObjectUtils.Testing;
+using Capgemini.CommonObjectUtils.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CommonObjectUtils.Testing.Tests
+namespace Capgemini.CommonObjectUtils.Testing.Tests
 {
     /// <summary>
     /// Tests the EqualsTester class.

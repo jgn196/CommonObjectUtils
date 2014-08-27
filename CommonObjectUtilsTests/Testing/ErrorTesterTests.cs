@@ -1,9 +1,9 @@
 ﻿using System;
 
-using CommonObjectUtils.Testing;
+using Capgemini.CommonObjectUtils.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CommonObjectUtils.Tests.Testing
+namespace Capgemini.CommonObjectUtils.Tests.Testing
 {
     /// <summary>
     /// Tests the ErrorTester class.
