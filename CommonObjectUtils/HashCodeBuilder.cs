@@ -72,9 +72,9 @@ namespace Capgemini.CommonObjectUtils
         /// </summary>
         /// <remarks>
         /// Don't pass arrays, lists or other collections to this method as the top level objects will be hashed rather than
-        /// the contents. Instead call <see cref="Append<T>(ICollection<T>)"/>.
+        /// the contents. Instead call <see cref="Append{T}(ICollection{T})"/>.
         /// </remarks>
-        /// <seealso cref="Append<T>(ICollection<T>)"/>
+        /// <seealso cref="Append{T}(ICollection{T})"/>
         /// <param name="value">The field to append.</param>
         /// <returns>The HashCodeBuilder for chaining calls.</returns>
         public HashCodeBuilder Append(object value)
@@ -97,10 +97,7 @@ namespace Capgemini.CommonObjectUtils
         {
             if (values != null)
             {
-                foreach (T value in values)
-                {
-                    Append(value);
-                }
+                values.ForEach(value => Append(value));
             }
 
             return this;

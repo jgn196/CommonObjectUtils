@@ -146,10 +146,7 @@ namespace Capgemini.CommonObjectUtils.Testing
         /// <param name="action">The action to apply.</param>
         private static void ForEachGroupItem(object[] group, Action<object> action)
         {
-            foreach (object item in group)
-            {
-                action.Invoke(item);
-            }
+            group.ForEach(item => action.Invoke(item));
         }
 
         /// <summary>
@@ -163,13 +160,7 @@ namespace Capgemini.CommonObjectUtils.Testing
             object[] rightGroup,
             Action<object, object> action)
         {
-            foreach (object left in leftGroup)
-            {
-                foreach (object right in rightGroup)
-                {
-                    action.Invoke(left, right);
-                }
-            }
+            leftGroup.ForEach(left => rightGroup.ForEach(right => action.Invoke(left, right)));
         }
 
         /// <summary>
@@ -178,10 +169,7 @@ namespace Capgemini.CommonObjectUtils.Testing
         /// <param name="action">The action to apply.</param>
         private void ForEachGroup(Action<object[]> action)
         {
-            foreach (object[] group in equalityGroups)
-            {
-                action.Invoke(group);
-            }
+            equalityGroups.ForEach(group => action.Invoke(group));
         }
 
         /// <summary>
@@ -190,13 +178,8 @@ namespace Capgemini.CommonObjectUtils.Testing
         /// <param name="action">The action to apply.</param>
         private void ForEachGroupCombo(Action<object[], object[]> action)
         {
-            foreach (object[] leftGroup in equalityGroups)
-            {
-                foreach (object[] rightGroup in equalityGroups)
-                {
-                    action.Invoke(leftGroup, rightGroup);
-                }
-            }
+            equalityGroups.ForEach(
+                leftGroup => equalityGroups.ForEach(rightGroup => action.Invoke(leftGroup, rightGroup)));
         }
 
         /// <summary>

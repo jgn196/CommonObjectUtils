@@ -49,7 +49,7 @@ namespace Capgemini.CommonObjectUtils
         private bool isEqual = true;
 
         /// <summary>
-        /// Gets the equality value.
+        /// Gets a value indicating whether fields were equal.
         /// </summary>
         /// <value>Indicates whether the fields that have been appended were all equal.</value>
         public bool IsEquals
