@@ -15,5 +15,7 @@ In addition, the project also contains the following classes to support common o
 * EqualsTester
 * ErrorTester
 
-For much more detailed information build the CommonObjectUtilsHelp Visual Studio help project in
-the solution.
+For more detailed information see the [Project Help Pages](http://jgn196.github.io/CommonObjectUtils).
+
+If you prefer you can build the help pages from the CommonObjectUtilsHelp Visual Studio help project in the solution. 
+This requires the Sandcastle tools.
