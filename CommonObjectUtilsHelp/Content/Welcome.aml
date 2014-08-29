@@ -56,6 +56,15 @@
       </content>
     </section>
 
+    <section>
+      <title>Target .NET Framework</title>
+      <content>
+        <para>
+          The library targets the .Net 4.5 framework.
+        </para>
+      </content>
+    </section>
+
     <relatedTopics>
       <link xlink:href="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" />
     </relatedTopics>
