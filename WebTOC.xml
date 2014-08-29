@@ -2,34 +2,34 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the CommonObjectUtils" Url="html/dcab8a25-c58b-43a3-ba17-28ec080e8ca4.htm" />
-  <HelpTOCNode Id="2a2eb0f6-7691-4a36-ba0a-86572ed7c111" Title="Version History" Url="html/0d3dedc1-b281-4e16-8027-fcd5bcdd6452.htm">
+  <HelpTOCNode Id="bb8c9910-095b-47af-8edc-728c24c4f4f7" Title="Version History" Url="html/0d3dedc1-b281-4e16-8027-fcd5bcdd6452.htm">
     <HelpTOCNode Title="Version 1.0" Url="html/7bcc2781-362c-45c5-b568-703b27eb172f.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="79a05d2c-8d64-4395-bb52-cc41598fde35" Title="Capgemini.CommonObjectUtils" Url="html/7c084a86-34d7-cd4b-b64d-6ad0212bd64b.htm">
-    <HelpTOCNode Id="82bf746c-880a-42ad-80c3-19ef19b1983b" Title="EnumerableExtensions Class" Url="html/4e33f18a-cfc5-9e70-6ad1-9970fa5f1187.htm">
-      <HelpTOCNode Id="c225c98d-0314-4765-8a11-3504dc22ddb7" Title="EnumerableExtensions Methods" Url="html/2570b584-8a69-368f-ede4-22e0a907350d.htm">
+  <HelpTOCNode Id="f40921f6-f1ca-46fc-9fff-46d822e9b65d" Title="Capgemini.CommonObjectUtils" Url="html/7c084a86-34d7-cd4b-b64d-6ad0212bd64b.htm">
+    <HelpTOCNode Id="0a4755b2-ce9b-4f07-8742-5e131b3293a4" Title="EnumerableExtensions Class" Url="html/4e33f18a-cfc5-9e70-6ad1-9970fa5f1187.htm">
+      <HelpTOCNode Id="177d874a-afdd-44f8-8d0d-35487a51e5d1" Title="EnumerableExtensions Methods" Url="html/2570b584-8a69-368f-ede4-22e0a907350d.htm">
         <HelpTOCNode Title="ForEach(T) Method " Url="html/4990f67b-1a2f-21a1-6b2e-0467588a9f26.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fb67687d-36bd-43a0-a9e2-64cacfdc2dda" Title="EqualsBuilder Class" Url="html/2aeaa89e-fcde-ff4a-89b1-a6aa00cb6d35.htm">
+    <HelpTOCNode Id="d68cb880-3567-4cac-8b4d-8893d6ff86fb" Title="EqualsBuilder Class" Url="html/2aeaa89e-fcde-ff4a-89b1-a6aa00cb6d35.htm">
       <HelpTOCNode Title="EqualsBuilder Constructor " Url="html/03e0c886-9477-cf6d-37f4-b13de72522aa.htm" />
-      <HelpTOCNode Id="0b9d134f-de58-4761-b0f7-55b4deb9b923" Title="EqualsBuilder Methods" Url="html/392283d3-90fe-8493-8ab3-91feed01fee7.htm">
+      <HelpTOCNode Id="ed18a311-9455-44a5-a59e-485f51b86d1c" Title="EqualsBuilder Methods" Url="html/392283d3-90fe-8493-8ab3-91feed01fee7.htm">
         <HelpTOCNode Title="Append(T) Method " Url="html/63870934-faa0-596e-d750-c4647c8ea3e5.htm" />
         <HelpTOCNode Title="AppendBase Method " Url="html/122af4aa-ec88-827e-c188-3d30c91d90f8.htm" />
         <HelpTOCNode Title="AppendMany(T) Method " Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
         <HelpTOCNode Title="Reset Method " Url="html/dc6e9dc9-626b-d56b-5e07-1d26f91f9683.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dbc9abd1-8ec9-4bdd-99ef-b32d0eab08df" Title="EqualsBuilder Properties" Url="html/4e3ad354-1479-2de2-e683-08e2d6cf6eb4.htm">
+      <HelpTOCNode Id="bb47dd65-1259-4347-970b-8b26107e41bf" Title="EqualsBuilder Properties" Url="html/4e3ad354-1479-2de2-e683-08e2d6cf6eb4.htm">
         <HelpTOCNode Title="IsEquals Property " Url="html/a5956b13-17e1-0d2b-c20e-0f0c7928166a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d8d7c6d8-6f27-4b2e-8862-262f068b3164" Title="HashCodeBuilder Class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm">
-      <HelpTOCNode Id="b374fd3b-7866-4125-a0bf-3dadafb226c9" Title="HashCodeBuilder Constructor " Url="html/68dd3606-7d0b-98e2-303d-c155e96bbfba.htm">
+    <HelpTOCNode Id="a45c1ad9-699c-4bb0-bc07-002ce9d91fe0" Title="HashCodeBuilder Class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm">
+      <HelpTOCNode Id="04444e50-584d-46eb-8df5-ce8c26b05740" Title="HashCodeBuilder Constructor " Url="html/68dd3606-7d0b-98e2-303d-c155e96bbfba.htm">
         <HelpTOCNode Title="HashCodeBuilder Constructor " Url="html/a0a13043-b4de-2dc0-3121-0fb6c38b6719.htm" />
         <HelpTOCNode Title="HashCodeBuilder Constructor (Int32, Int32)" Url="html/fdbfbf28-27e0-6efc-6f3e-8bd7fd5f5e86.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9e2a7631-5223-4e34-a47d-2cc788f1c03a" Title="HashCodeBuilder Methods" Url="html/05d5c77e-72fd-fe45-9f12-a69d25b6f92d.htm">
-        <HelpTOCNode Id="942112c6-742b-438a-a1c8-fc1fd9b6990c" Title="Append Method " Url="html/28c46be4-b1b6-a7e7-c43b-039adfea31fb.htm">
+      <HelpTOCNode Id="c08ca950-cc71-4efe-92d1-89efb9a71974" Title="HashCodeBuilder Methods" Url="html/05d5c77e-72fd-fe45-9f12-a69d25b6f92d.htm">
+        <HelpTOCNode Id="21191798-5656-4e61-b600-3b3ff9965d7b" Title="Append Method " Url="html/28c46be4-b1b6-a7e7-c43b-039adfea31fb.htm">
           <HelpTOCNode Title="Append(T) Method (ICollection(T))" Url="html/43089bd9-0738-2f03-871a-2794be4bf86e.htm" />
           <HelpTOCNode Title="Append Method (Object)" Url="html/6c73b42b-e1e7-02f8-28e7-20d44329455e.htm" />
         </HelpTOCNode>
@@ -37,9 +37,9 @@
         <HelpTOCNode Title="GetHashCode Method " Url="html/35781797-34d4-7387-1971-523c6c157bb9.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="cef38901-55ad-42b6-bdc4-8c6f9fe3ce18" Title="ToStringBuilder Class" Url="html/72e674b1-4505-63b2-23eb-7af9ac917768.htm">
+    <HelpTOCNode Id="1a0a34a5-3a1e-4cbe-a237-b97b1508dda6" Title="ToStringBuilder Class" Url="html/72e674b1-4505-63b2-23eb-7af9ac917768.htm">
       <HelpTOCNode Title="ToStringBuilder Constructor " Url="html/a58f0667-7fca-c8c9-c26b-453b271cfacc.htm" />
-      <HelpTOCNode Id="0c419106-f926-4821-81b2-680f0dce6f66" Title="ToStringBuilder Methods" Url="html/87aca696-155d-1c24-ad4c-291de1bef8ba.htm">
+      <HelpTOCNode Id="b834e7d6-da16-4af6-aafa-ac286ff37d73" Title="ToStringBuilder Methods" Url="html/87aca696-155d-1c24-ad4c-291de1bef8ba.htm">
         <HelpTOCNode Title="Append(T) Method " Url="html/580dda60-3e40-78c5-fe5d-de408c36bf5f.htm" />
         <HelpTOCNode Title="AppendBase Method " Url="html/1f0ce627-309b-d8df-f9ba-780607ffa292.htm" />
         <HelpTOCNode Title="AppendMany(T) Method " Url="html/2ebdb5af-53bb-4a4a-9c3a-fdb58f5ca785.htm" />
@@ -47,16 +47,16 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="843c1ae7-865b-419f-8fff-4795615eee27" Title="Capgemini.CommonObjectUtils.Testing" Url="html/a034e33e-f626-d6b1-abe8-38ba1fa53dca.htm">
-    <HelpTOCNode Id="bade5ef9-6c27-4ab9-a065-1bd9a5645ac6" Title="EqualsTester Class" Url="html/7ea4b74e-b232-e8d4-b261-d1b7d7aff280.htm">
+  <HelpTOCNode Id="9f74b2c2-bc44-466f-a008-d0c95a7bf408" Title="Capgemini.CommonObjectUtils.Testing" Url="html/a034e33e-f626-d6b1-abe8-38ba1fa53dca.htm">
+    <HelpTOCNode Id="8368a2a1-2dbc-487a-a6c7-b68838c0e55c" Title="EqualsTester Class" Url="html/7ea4b74e-b232-e8d4-b261-d1b7d7aff280.htm">
       <HelpTOCNode Title="EqualsTester Constructor " Url="html/13dcba63-91f5-fd86-79e6-5123d374b077.htm" />
-      <HelpTOCNode Id="e71658b3-d8c9-4c26-b055-d542acf610be" Title="EqualsTester Methods" Url="html/c3329027-0607-e244-b619-955b4d9df504.htm">
+      <HelpTOCNode Id="f4f5eb8b-6fa2-4f10-a907-b4ef6e58d6d9" Title="EqualsTester Methods" Url="html/c3329027-0607-e244-b619-955b4d9df504.htm">
         <HelpTOCNode Title="AddEqualityGroup Method " Url="html/41241784-94f5-fa9e-f12a-62a0df5185d3.htm" />
         <HelpTOCNode Title="TestEquals Method " Url="html/27eb56e3-f88a-5d54-7634-e0d3805c3830.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="78c5a009-a305-4ff0-a255-5be328e5e8e6" Title="EqualsTestException Class" Url="html/ffbfbd3d-081b-28ff-3cd4-182129d8ac7c.htm">
-      <HelpTOCNode Id="7686503b-e640-42ad-ac38-9535d218844a" Title="EqualsTestException Constructor " Url="html/9dfa616c-86b1-e7be-99f4-2a9c1850a440.htm">
+    <HelpTOCNode Id="de64a3a8-5029-41f1-815a-54f0bc1a8bc5" Title="EqualsTestException Class" Url="html/ffbfbd3d-081b-28ff-3cd4-182129d8ac7c.htm">
+      <HelpTOCNode Id="8e871dd0-0d1f-4757-b045-78197bb1994e" Title="EqualsTestException Constructor " Url="html/9dfa616c-86b1-e7be-99f4-2a9c1850a440.htm">
         <HelpTOCNode Title="EqualsTestException Constructor " Url="html/2a7da3bf-4a40-069e-8b18-5c5894894f7e.htm" />
         <HelpTOCNode Title="EqualsTestException Constructor (String)" Url="html/35d94cbc-9a9a-2312-5c0c-923dd9566196.htm" />
         <HelpTOCNode Title="EqualsTestException Constructor (SerializationInfo, StreamingContext)" Url="html/60574541-af09-1ef0-6435-0b893caec7f4.htm" />
@@ -66,14 +66,14 @@
       <HelpTOCNode Title="EqualsTestException Properties" Url="html/743a9e99-a16e-63a8-14bf-299204437451.htm" />
       <HelpTOCNode Title="EqualsTestException Events" Url="html/2c29b2c7-1c08-6aa7-c2b3-a8dcacd1f7f1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="1f917efa-2a99-4715-bb90-a6925f1e2350" Title="ErrorTester Class" Url="html/d61f28c9-7498-368d-1db6-ff51999acd6f.htm">
+    <HelpTOCNode Id="d6d50ea8-91ff-4d6e-abd3-990dbcdeca70" Title="ErrorTester Class" Url="html/d61f28c9-7498-368d-1db6-ff51999acd6f.htm">
       <HelpTOCNode Title="ErrorTester Constructor " Url="html/18a9c89f-be98-0d4e-c044-faf8b338c998.htm" />
-      <HelpTOCNode Id="6a8106ff-cf0c-47fb-841e-8d0e84db2b04" Title="ErrorTester Methods" Url="html/150000ae-6bdc-5587-a7fb-6091b96fe9b5.htm">
+      <HelpTOCNode Id="b5e0f23a-5926-4393-ae55-726f55ec168c" Title="ErrorTester Methods" Url="html/150000ae-6bdc-5587-a7fb-6091b96fe9b5.htm">
         <HelpTOCNode Title="Test Method " Url="html/a2264950-eaf0-491d-b89f-8dfa5eec79f0.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c3e51101-ad08-474b-9037-f3dbd743f274" Title="ErrorTestException Class" Url="html/5ab7f9ad-1c35-2e08-7500-0f88793250b7.htm">
-      <HelpTOCNode Id="773cc65d-8594-4791-b05d-c974e0446046" Title="ErrorTestException Constructor " Url="html/c99c1796-0ec0-877b-7733-b2e83e914ba1.htm">
+    <HelpTOCNode Id="69342c88-9d59-49b5-82de-19527d33d3a7" Title="ErrorTestException Class" Url="html/5ab7f9ad-1c35-2e08-7500-0f88793250b7.htm">
+      <HelpTOCNode Id="5ae4ff95-99d3-40a9-9411-70f69fa6934f" Title="ErrorTestException Constructor " Url="html/c99c1796-0ec0-877b-7733-b2e83e914ba1.htm">
         <HelpTOCNode Title="ErrorTestException Constructor " Url="html/d4f1af00-4206-9b26-1ae8-32415f69a1e2.htm" />
         <HelpTOCNode Title="ErrorTestException Constructor (String)" Url="html/99c43a77-ce2e-0f82-4dd3-4707328230ad.htm" />
         <HelpTOCNode Title="ErrorTestException Constructor (SerializationInfo, StreamingContext)" Url="html/95e20582-859b-d874-16b4-b5eee5159dc7.htm" />
