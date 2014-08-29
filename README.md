@@ -20,4 +20,4 @@ For more detailed information see the [Project Help Pages](http://jgn196.github.
 If you prefer you can build the help pages from the CommonObjectUtilsHelp Visual Studio help project in the solution. 
 This requires the Sandcastle tools.
 
-The library targets .NET 4.5.
+The library targets .NET 4.

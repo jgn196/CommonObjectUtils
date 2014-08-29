@@ -60,7 +60,7 @@
       <title>Target .NET Framework</title>
       <content>
         <para>
-          The library targets the .Net 4.5 framework.
+          The library targets the .Net 4 framework.
         </para>
       </content>
     </section>
