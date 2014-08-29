@@ -53,6 +53,22 @@
             </para>
           </listItem>
         </list>
+
+        <para>
+          You can carry out actions on enumerable data sets using the 
+          <codeEntityReference qualifyHint="false">
+            M:Capgemini.CommonObjectUtils.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+          </codeEntityReference>
+          extension method.
+        </para>
+
+        <para>
+          You can combine identical exception handling blocks using the
+          <codeEntityReference qualifyHint="false">
+            M:Capgemini.CommonObjectUtils.ExceptionExtensions.IsOneOf(System.Exception,System.Type[])
+          </codeEntityReference>
+          extension method.
+        </para>
       </content>
     </section>
 

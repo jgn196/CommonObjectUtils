@@ -19,9 +19,9 @@ namespace Capgemini.CommonObjectUtils
         /// <param name="action">The action to take on each element.</param>
         /// <example>
         /// <code>
-        /// List&lt;int> myList = new List&lt;int>() { 1, 2, 3 };
+        /// IEnumerable&lt;int> myItems = ...
         /// 
-        /// myList.ForEach((x) => Console.WriteLine(x));
+        /// myItems.ForEach((x) => Console.WriteLine(x));
         /// </code>
         /// </example>
         [SuppressMessage("Microsoft.Design", "CA1062", MessageId = "1", Justification = "Argument validated")]
