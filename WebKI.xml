@@ -26,6 +26,7 @@
   <HelpKINode Title="Capgemini.CommonObjectUtils namespace" Url="html/7c084a86-34d7-cd4b-b64d-6ad0212bd64b.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.EnumerableExtensions class" Url="html/4e33f18a-cfc5-9e70-6ad1-9970fa5f1187.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.EqualsBuilder class" Url="html/2aeaa89e-fcde-ff4a-89b1-a6aa00cb6d35.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.ExceptionExtensions class" Url="html/cc28b74f-83df-a644-e151-7d0369d3a75e.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.HashCodeBuilder class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.Testing namespace" Url="html/a034e33e-f626-d6b1-abe8-38ba1fa53dca.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.Testing.EqualsTester class" Url="html/7ea4b74e-b232-e8d4-b261-d1b7d7aff280.htm" />
@@ -90,6 +91,12 @@
     <HelpKINode Title="properties" Url="html/411a8660-4422-769a-075b-3af9502303bf.htm" />
   </HelpKINode>
   <HelpKINode Title="ErrorTestException.ErrorTestException constructor" Url="html/c99c1796-0ec0-877b-7733-b2e83e914ba1.htm" />
+  <HelpKINode Title="ExceptionExtensions class">
+    <HelpKINode Title="ExceptionExtensions Class" Url="html/cc28b74f-83df-a644-e151-7d0369d3a75e.htm" />
+    <HelpKINode Title="about ExceptionExtensions class" Url="html/cc28b74f-83df-a644-e151-7d0369d3a75e.htm" />
+    <HelpKINode Title="methods" Url="html/8876ea21-d36d-4bff-77a3-547b665c5666.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExceptionExtensions.IsOneOf method" Url="html/2e8f5cec-e3ce-878a-0867-871d27eaf1ad.htm" />
   <HelpKINode Title="ForEach(Of T) method" Url="html/4990f67b-1a2f-21a1-6b2e-0467588a9f26.htm" />
   <HelpKINode Title="ForEach&lt;T&gt; method" Url="html/4990f67b-1a2f-21a1-6b2e-0467588a9f26.htm" />
   <HelpKINode Title="GetHashCode method" Url="html/35781797-34d4-7387-1971-523c6c157bb9.htm" />
@@ -104,6 +111,7 @@
   <HelpKINode Title="HashCodeBuilder.GetHashCode method" Url="html/35781797-34d4-7387-1971-523c6c157bb9.htm" />
   <HelpKINode Title="HashCodeBuilder.HashCodeBuilder constructor" Url="html/68dd3606-7d0b-98e2-303d-c155e96bbfba.htm" />
   <HelpKINode Title="IsEquals property" Url="html/a5956b13-17e1-0d2b-c20e-0f0c7928166a.htm" />
+  <HelpKINode Title="IsOneOf method" Url="html/2e8f5cec-e3ce-878a-0867-871d27eaf1ad.htm" />
   <HelpKINode Title="Reset method" Url="html/dc6e9dc9-626b-d56b-5e07-1d26f91f9683.htm" />
   <HelpKINode Title="Test method" Url="html/a2264950-eaf0-491d-b89f-8dfa5eec79f0.htm" />
   <HelpKINode Title="TestEquals method" Url="html/27eb56e3-f88a-5d54-7634-e0d3805c3830.htm" />
