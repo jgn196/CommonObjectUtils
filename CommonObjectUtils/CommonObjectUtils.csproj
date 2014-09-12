@@ -52,9 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="EqualsBuilder.cs" />
     <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="MissingBuilderArgument.cs" />
     <Compile Include="Testing\ErrorTester.cs" />
     <Compile Include="Testing\ErrorTestException.cs" />
     <Compile Include="Testing\EqualsTester.cs" />

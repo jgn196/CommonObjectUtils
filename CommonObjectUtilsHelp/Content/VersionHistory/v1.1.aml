@@ -17,6 +17,14 @@
         <list class="bullet">
           <listItem>
             <para>
+              Provides support for the Builder pattern with an abstract 
+              <codeEntityReference>T:Capgemini.CommonObjectUtils.Builder`1</codeEntityReference> 
+              base class that checks mandatory arguments are supplied before building starts.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
               Provides support for carrying out actions on each element of an IEnumerable object using
               the
               <codeEntityReference qualifyHint="false">
@@ -25,9 +33,7 @@
               extension method.
             </para>
           </listItem>
-        </list>
 
-        <list class="bullet">
           <listItem>
             <para>
               Provides support for combining identical catch exception blocks by using
@@ -38,9 +44,7 @@
               extension method for the Exception class.
             </para>
           </listItem>
-        </list>
 
-        <list class="bullet">
           <listItem>
             <para>Reduced the required .Net framework version to 4.0.</para>
           </listItem>

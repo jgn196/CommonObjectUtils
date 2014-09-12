@@ -38,6 +38,12 @@
         </list>
 
         <para>
+          You can use the <codeEntityReference>
+            T:Capgemini.CommonObjectUtils.Builder`1
+          </codeEntityReference> class to help you write object builders.
+        </para>
+
+        <para>
           You can use the following classes to help you write common unit tests:
         </para>
 

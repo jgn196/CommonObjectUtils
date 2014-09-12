@@ -61,6 +61,7 @@
     <Compile Include="ToStringBuilderTests.cs" />
     <Compile Include="EnumerableExtensionsTests.cs" />
     <Compile Include="ExceptionExtensionsTests.cs" />
+    <Compile Include="BuilderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonObjectUtils\CommonObjectUtils.csproj">
