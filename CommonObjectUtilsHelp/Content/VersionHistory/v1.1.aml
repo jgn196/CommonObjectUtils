@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1510b232-6f98-4cd7-8f8e-4ebe5adfea2b" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        Version v1.1 was released on...
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              Provides support for carrying out actions on each element of an IEnumerable object using
+              the
+              <codeEntityReference qualifyHint="false">
+                M:Capgemini.CommonObjectUtils.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+              </codeEntityReference>
+              extension method.
+            </para>
+          </listItem>
+        </list>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              Provides support for combining identical catch exception blocks by using
+              the
+              <codeEntityReference qualifyHint="false">
+                M:Capgemini.CommonObjectUtils.ExceptionExtensions.IsOneOf(System.Exception,System.Type[])
+              </codeEntityReference>
+              extension method for the Exception class.
+            </para>
+          </listItem>
+        </list>
+
+        <list class="bullet">
+          <listItem>
+            <para>Reduced the required .Net framework version to 4.0.</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
