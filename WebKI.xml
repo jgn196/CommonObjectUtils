@@ -23,11 +23,44 @@
     <HelpKINode Title="EqualsBuilder.AppendMany(T) Method " Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
     <HelpKINode Title="ToStringBuilder.AppendMany(T) Method " Url="html/2ebdb5af-53bb-4a4a-9c3a-fdb58f5ca785.htm" />
   </HelpKINode>
+  <HelpKINode Title="Build method" Url="html/c60b5bf8-676a-90de-86d3-68b165b98504.htm" />
+  <HelpKINode Title="Builder(Of T) class">
+    <HelpKINode Title="Builder(T) Class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+    <HelpKINode Title="about Builder(Of T) class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+    <HelpKINode Title="constructor" Url="html/08549f16-bddb-ac34-724c-2837cdbd4c6d.htm" />
+    <HelpKINode Title="methods" Url="html/edb7bcf0-c53b-93fa-ebba-7c99861ad288.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Builder(Of T).Build method" Url="html/c60b5bf8-676a-90de-86d3-68b165b98504.htm" />
+  <HelpKINode Title="Builder(Of T).Builder constructor" Url="html/08549f16-bddb-ac34-724c-2837cdbd4c6d.htm" />
+  <HelpKINode Title="Builder(Of T).BuildImplementation method" Url="html/0d1a27e2-a27e-df3f-8764-70eb32bb33cf.htm" />
+  <HelpKINode Title="Builder(Of T).Expect method" Url="html/d2827794-e198-330b-c355-06b9f86b08b2.htm" />
+  <HelpKINode Title="Builder(Of T).Got method" Url="html/acf0203a-5a55-4349-c388-830896042d84.htm" />
+  <HelpKINode Title="Builder(Of T).Necessity enumeration" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
+  <HelpKINode Title="Builder(Of T).Receive(Of TArg) method" Url="html/278c06f4-b832-0869-c1cf-78303d501c0b.htm" />
+  <HelpKINode Title="Builder&lt;T&gt; class">
+    <HelpKINode Title="Builder(T) Class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+    <HelpKINode Title="about Builder&lt;T&gt; class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+    <HelpKINode Title="constructor" Url="html/08549f16-bddb-ac34-724c-2837cdbd4c6d.htm" />
+    <HelpKINode Title="methods" Url="html/edb7bcf0-c53b-93fa-ebba-7c99861ad288.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Builder&lt;T&gt;.Build method" Url="html/c60b5bf8-676a-90de-86d3-68b165b98504.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.Builder constructor" Url="html/08549f16-bddb-ac34-724c-2837cdbd4c6d.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.BuildImplementation method" Url="html/0d1a27e2-a27e-df3f-8764-70eb32bb33cf.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.Expect method" Url="html/d2827794-e198-330b-c355-06b9f86b08b2.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.Got method" Url="html/acf0203a-5a55-4349-c388-830896042d84.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.Necessity enumeration" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
+  <HelpKINode Title="Builder&lt;T&gt;.Receive&lt;TArg&gt; method" Url="html/278c06f4-b832-0869-c1cf-78303d501c0b.htm" />
+  <HelpKINode Title="BuildImplementation method" Url="html/0d1a27e2-a27e-df3f-8764-70eb32bb33cf.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils namespace" Url="html/7c084a86-34d7-cd4b-b64d-6ad0212bd64b.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.Builder(Of T) class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.Builder(Of T).Necessity enumeration" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.Builder&lt;T&gt; class" Url="html/00d7f1ea-69b7-b436-fbf2-6861af6fe207.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.Builder&lt;T&gt;.Necessity enumeration" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.EnumerableExtensions class" Url="html/4e33f18a-cfc5-9e70-6ad1-9970fa5f1187.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.EqualsBuilder class" Url="html/2aeaa89e-fcde-ff4a-89b1-a6aa00cb6d35.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.ExceptionExtensions class" Url="html/cc28b74f-83df-a644-e151-7d0369d3a75e.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.HashCodeBuilder class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm" />
+  <HelpKINode Title="Capgemini.CommonObjectUtils.MissingBuilderArgumentException class" Url="html/abf20f3f-59f1-2e68-8d99-f165376d70e6.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.Testing namespace" Url="html/a034e33e-f626-d6b1-abe8-38ba1fa53dca.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.Testing.EqualsTester class" Url="html/7ea4b74e-b232-e8d4-b261-d1b7d7aff280.htm" />
   <HelpKINode Title="Capgemini.CommonObjectUtils.Testing.EqualsTestException class" Url="html/ffbfbd3d-081b-28ff-3cd4-182129d8ac7c.htm" />
@@ -97,9 +130,11 @@
     <HelpKINode Title="methods" Url="html/8876ea21-d36d-4bff-77a3-547b665c5666.htm" />
   </HelpKINode>
   <HelpKINode Title="ExceptionExtensions.IsOneOf method" Url="html/2e8f5cec-e3ce-878a-0867-871d27eaf1ad.htm" />
+  <HelpKINode Title="Expect method" Url="html/d2827794-e198-330b-c355-06b9f86b08b2.htm" />
   <HelpKINode Title="ForEach(Of T) method" Url="html/4990f67b-1a2f-21a1-6b2e-0467588a9f26.htm" />
   <HelpKINode Title="ForEach&lt;T&gt; method" Url="html/4990f67b-1a2f-21a1-6b2e-0467588a9f26.htm" />
   <HelpKINode Title="GetHashCode method" Url="html/35781797-34d4-7387-1971-523c6c157bb9.htm" />
+  <HelpKINode Title="Got method" Url="html/acf0203a-5a55-4349-c388-830896042d84.htm" />
   <HelpKINode Title="HashCodeBuilder class">
     <HelpKINode Title="HashCodeBuilder Class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm" />
     <HelpKINode Title="about HashCodeBuilder class" Url="html/533fb587-b391-a0a0-c33d-b1439e890662.htm" />
@@ -112,6 +147,19 @@
   <HelpKINode Title="HashCodeBuilder.HashCodeBuilder constructor" Url="html/68dd3606-7d0b-98e2-303d-c155e96bbfba.htm" />
   <HelpKINode Title="IsEquals property" Url="html/a5956b13-17e1-0d2b-c20e-0f0c7928166a.htm" />
   <HelpKINode Title="IsOneOf method" Url="html/2e8f5cec-e3ce-878a-0867-871d27eaf1ad.htm" />
+  <HelpKINode Title="Mandatory enumeration member" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
+  <HelpKINode Title="MissingBuilderArgumentException class">
+    <HelpKINode Title="MissingBuilderArgumentException Class" Url="html/abf20f3f-59f1-2e68-8d99-f165376d70e6.htm" />
+    <HelpKINode Title="about MissingBuilderArgumentException class" Url="html/abf20f3f-59f1-2e68-8d99-f165376d70e6.htm" />
+    <HelpKINode Title="constructor" Url="html/b5c7fd03-8918-9af5-6673-bcd896b95a27.htm" />
+    <HelpKINode Title="events" Url="html/a1316e9a-978f-1d25-6408-c8a60890f169.htm" />
+    <HelpKINode Title="methods" Url="html/4a67c7af-dde4-8789-686a-ba265042dc61.htm" />
+    <HelpKINode Title="properties" Url="html/657cd60f-f65d-3e1c-9ace-82e61f6f0209.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MissingBuilderArgumentException.MissingBuilderArgumentException constructor" Url="html/b5c7fd03-8918-9af5-6673-bcd896b95a27.htm" />
+  <HelpKINode Title="Optional enumeration member" Url="html/801ba66b-2f73-1177-8f5c-4ce05264d32e.htm" />
+  <HelpKINode Title="Receive(Of TArg) method" Url="html/278c06f4-b832-0869-c1cf-78303d501c0b.htm" />
+  <HelpKINode Title="Receive&lt;TArg&gt; method" Url="html/278c06f4-b832-0869-c1cf-78303d501c0b.htm" />
   <HelpKINode Title="Reset method" Url="html/dc6e9dc9-626b-d56b-5e07-1d26f91f9683.htm" />
   <HelpKINode Title="Test method" Url="html/a2264950-eaf0-491d-b89f-8dfa5eec79f0.htm" />
   <HelpKINode Title="TestEquals method" Url="html/27eb56e3-f88a-5d54-7634-e0d3805c3830.htm" />
@@ -131,6 +179,7 @@
   <HelpKINode Title="ToStringBuilder.ToStringBuilder constructor" Url="html/a58f0667-7fca-c8c9-c26b-453b271cfacc.htm" />
   <HelpKINode Title="version">
     <HelpKINode Title="1.0" Url="html/7bcc2781-362c-45c5-b568-703b27eb172f.htm" />
+    <HelpKINode Title="1.1" Url="html/1510b232-6f98-4cd7-8f8e-4ebe5adfea2b.htm" />
     <HelpKINode Title="history" Url="html/0d3dedc1-b281-4e16-8027-fcd5bcdd6452.htm" />
   </HelpKINode>
   <HelpKINode Title="Welcome" Url="html/dcab8a25-c58b-43a3-ba17-28ec080e8ca4.htm" />
