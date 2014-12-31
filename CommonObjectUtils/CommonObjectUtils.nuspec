@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Capgemini.CommonObjectUtils</id>
+    <version>1.1</version>
+    <title>CommonObjectUtils</title>
+    <authors>John Nash</authors>
+    <owners>John Nash</owners>
+    <licenseUrl>http://github.com/jgn196/CommonObjectUtils/blob/develop/LICENSE.txt</licenseUrl>
+    <projectUrl>http://github.com/jgn196/CommonObjectUtils</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .Net class library to make writing common object methods quicker and more consistent.</description>
+    <releaseNotes>
+		Support for the Builder pattern with an abstract Builder base class that checks mandatory arguments are supplied before building starts.
+		Support for carrying out actions on each element of an IEnumerable object using the ForEach extension method.
+		Support for combining identical catch exception blocks by using the IsOneOf extension method for the Exception class.
+		The required .Net framework version has been reduced to 4.0.
+	</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+  </metadata>
+</package>
