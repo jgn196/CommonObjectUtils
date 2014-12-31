@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Capgemini.CommonObjectUtils
 {
@@ -90,6 +91,17 @@ namespace Capgemini.CommonObjectUtils
         /// <param name="values">The collection field</param>
         /// <returns>The HashCodeBuilder for chaining calls.</returns>
         public HashCodeBuilder Append<T>(ICollection<T> values)
+        {
+            return AppendMany(values);
+        }
+
+        /// <summary>
+        /// Appends the values in a collection field to the hash code calculation.
+        /// </summary>
+        /// <typeparam name="T">The type of objects held in the collection field.</typeparam>
+        /// <param name="values">The collection field</param>
+        /// <returns>The HashCodeBuilder for chaining calls.</returns>
+        public HashCodeBuilder AppendMany<T>(ICollection<T> values)
         {
             if (values != null)
             {
