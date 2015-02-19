@@ -38,6 +38,10 @@ namespace Capgemini.CommonObjectUtils.Tests
 
             Assert.IsTrue(new EqualsBuilder().Append('c', 'c').IsEquals);
             Assert.IsTrue(new EqualsBuilder().Append("foo", "foo").IsEquals);
+
+            Assert.IsTrue(new EqualsBuilder().Append((string) null, null).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().Append(null, "foo").IsEquals);
+            Assert.IsFalse(new EqualsBuilder().Append("foo", null).IsEquals);
         }
 
         /// <summary>

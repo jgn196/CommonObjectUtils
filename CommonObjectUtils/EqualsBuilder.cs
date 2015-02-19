@@ -71,7 +71,11 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right) where T : IEquatable<T>
         {
-            isEqual = isEqual && left.Equals(right);
+            bool leftIsNull = left == null;
+            bool areSame = ReferenceEquals(left, right);
+            bool result = areSame || !leftIsNull && left.Equals(right);
+
+            isEqual = isEqual && result;
 
             return this;
         }
