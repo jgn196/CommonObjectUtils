@@ -81,10 +81,13 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
-        /// Appends two enumerable objects that contain the same (<c>IEquatable</c>) type to the list of values to compare.
+        /// Appends two enumerable objects that contain the same (<c>IEquatable</c>) type to the list of values 
+        /// to compare.
         /// </summary>
         /// <remarks>
         /// EqualsBuilder will perform a deep comparison of the two enumerable objects.
+        /// Each element pair in the enumerations is compared by calling the <c>Equals</c> method of the 
+        /// <c>IEquatable</c> interface.
         /// </remarks>
         /// <typeparam name="T">The type the enumerable objects contain.</typeparam>
         /// <param name="left">The left hand enumerable.</param>
@@ -108,7 +111,58 @@ namespace Capgemini.CommonObjectUtils
             }
             else
             {
-                var deepEquals = left.Zip(right, (l, r) => l.Equals(r));
+                var deepEquals = left.Zip(right, (l, r) => {
+                    if (l == null)
+                    {
+                        return false;
+                    }
+                    return l.Equals(r);
+                });
+
+                result = deepEquals.All(r => r);
+            }
+
+            isEqual = isEqual && result;
+
+            return this;
+        }
+
+        /// <summary>
+        /// Appends two enumerable objects that contain the same type to the list of values to compare.
+        /// </summary>
+        /// <remarks>
+        /// EqualsBuilder will perform a deep comparison of the two enumerable objects.
+        /// If the enumerated objects implement <c>IEquatable</c> you can call the <c>AppendMany</c> with two
+        /// arguments instead.
+        /// </remarks>
+        /// <typeparam name="T">The type the enumerable objects contain.</typeparam>
+        /// <param name="left">The left hand enumerable.</param>
+        /// <param name="right">The right hand enumerable.</param>
+        /// <param name="comparer">An implementation of the <c>IEqualityComparer</c> interface that can compare
+        /// elements in the enumerations.</param>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
+        public EqualsBuilder AppendMany<T>(
+            IEnumerable<T> left, 
+            IEnumerable<T> right, 
+            IEqualityComparer<T> comparer)
+        {
+            bool result;
+
+            if (left == right)
+            {
+                result = true;
+            }
+            else if (left == null || right == null)
+            {
+                result = false;
+            }
+            else if (left.Count() != right.Count())
+            {
+                result = false;
+            }
+            else
+            {
+                var deepEquals = left.Zip(right, (l, r) => comparer.Equals(l, r));
 
                 result = deepEquals.All(r => r);
             }

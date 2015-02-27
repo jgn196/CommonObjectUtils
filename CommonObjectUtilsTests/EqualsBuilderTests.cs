@@ -2,6 +2,7 @@
 
 using Capgemini.CommonObjectUtils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Capgemini.CommonObjectUtils.Tests
 {
@@ -39,13 +40,13 @@ namespace Capgemini.CommonObjectUtils.Tests
             Assert.IsTrue(new EqualsBuilder().Append('c', 'c').IsEquals);
             Assert.IsTrue(new EqualsBuilder().Append("foo", "foo").IsEquals);
 
-            Assert.IsTrue(new EqualsBuilder().Append((string) null, null).IsEquals);
+            Assert.IsTrue(new EqualsBuilder().Append((string)null, null).IsEquals);
             Assert.IsFalse(new EqualsBuilder().Append(null, "foo").IsEquals);
             Assert.IsFalse(new EqualsBuilder().Append("foo", null).IsEquals);
         }
 
         /// <summary>
-        /// Tests comparing enumerable objects.
+        /// Tests comparing enumerable objects that implement IEquatable.
         /// </summary>
         [TestMethod]
         public void EqualsBuilder_AppendEnumerables()
@@ -65,6 +66,55 @@ namespace Capgemini.CommonObjectUtils.Tests
             Assert.IsFalse(new EqualsBuilder().AppendMany(null, new bool[] { true }).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true }, new bool[] { true, true }).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true, true }, new bool[] { true, false }).IsEquals);
+
+            Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { new Equatable() { value = 1 } }, new Equatable[] { null }).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { null }, new Equatable[] { new Equatable() { value = 1 } }).IsEquals);
+        }
+
+        /// <summary>
+        /// Tests comparing enumerable objects that don't implement IEquatable.
+        /// </summary>
+        [TestMethod]
+        public void EqualsBuilder_AppendMany_NotIEquatable()
+        {
+            var comparer = new NotEquatableComparer();
+            List<NotEquatable> nullNotEquatableList = null;
+            var notEquatable = new NotEquatable() { value = 1 };
+            var notEquatable2 = new NotEquatable() { value = 2 };
+
+            Assert.IsTrue(new EqualsBuilder()
+                .AppendMany(nullNotEquatableList, nullNotEquatableList, comparer)
+                .IsEquals);
+
+            Assert.IsTrue(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { notEquatable },
+                comparer).IsEquals);
+
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { notEquatable },
+                null,
+                comparer).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { null },
+                comparer).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { null },
+                new List<NotEquatable>() { notEquatable },
+                comparer).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                null,
+                new List<NotEquatable>() { notEquatable },
+                comparer).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { notEquatable2 },
+                comparer).IsEquals);
+            Assert.IsFalse(new EqualsBuilder().AppendMany(
+                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>(),
+                comparer).IsEquals);
         }
 
         /// <summary>
@@ -101,5 +151,46 @@ namespace Capgemini.CommonObjectUtils.Tests
 
             Assert.IsTrue(builder.IsEquals);
         }
+
+        private class Equatable : IEquatable<Equatable>
+        {
+            public int value;
+
+            public bool Equals(Equatable other)
+            {
+                if (other == null)
+                {
+                    return false;
+                }
+                return value == other.value;
+            }
+        }
+
+        private class NotEquatable
+        {
+            public int value;
+        }
+
+        private class NotEquatableComparer : IEqualityComparer<NotEquatable>
+        {
+            public bool Equals(NotEquatable x, NotEquatable y)
+            {
+                if (x == null && y == null)
+                {
+                    return true;
+                }
+                if (x == null || y == null)
+                {
+                    return false;
+                }
+                return x.value == y.value;
+            }
+
+            public int GetHashCode(NotEquatable obj)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
     }
 }
