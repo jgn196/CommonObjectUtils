@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CuttingEdge.Conditions;
 
 namespace Capgemini.CommonObjectUtils
 {
@@ -95,9 +96,19 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
+            CommonAppendMany<T>(left, right, (l, r) => l != null && l.Equals(r));
+
+            return this;
+        }
+
+        private void CommonAppendMany<T>(
+            IEnumerable<T> left,
+            IEnumerable<T> right,
+            Func<T, T, bool> equalityFunc)
+        {
             bool result;
 
-            if (left == right)
+            if (ReferenceEquals(left, right))
             {
                 result = true;
             }
@@ -111,20 +122,12 @@ namespace Capgemini.CommonObjectUtils
             }
             else
             {
-                var deepEquals = left.Zip(right, (l, r) => {
-                    if (l == null)
-                    {
-                        return false;
-                    }
-                    return l.Equals(r);
-                });
+                var deepEquals = left.Zip(right, equalityFunc);
 
                 result = deepEquals.All(r => r);
             }
 
             isEqual = isEqual && result;
-
-            return this;
         }
 
         /// <summary>
@@ -142,32 +145,13 @@ namespace Capgemini.CommonObjectUtils
         /// elements in the enumerations.</param>
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(
-            IEnumerable<T> left, 
-            IEnumerable<T> right, 
+            IEnumerable<T> left,
+            IEnumerable<T> right,
             IEqualityComparer<T> comparer)
         {
-            bool result;
+            Condition.Requires(comparer).IsNotNull();
 
-            if (left == right)
-            {
-                result = true;
-            }
-            else if (left == null || right == null)
-            {
-                result = false;
-            }
-            else if (left.Count() != right.Count())
-            {
-                result = false;
-            }
-            else
-            {
-                var deepEquals = left.Zip(right, (l, r) => comparer.Equals(l, r));
-
-                result = deepEquals.All(r => r);
-            }
-
-            isEqual = isEqual && result;
+            CommonAppendMany<T>(left, right, (l, r) => comparer.Equals(l, r));
 
             return this;
         }
