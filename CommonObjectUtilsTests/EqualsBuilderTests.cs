@@ -69,6 +69,8 @@ namespace Capgemini.CommonObjectUtils.Tests
 
             Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { new Equatable() { value = 1 } }, new Equatable[] { null }).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { null }, new Equatable[] { new Equatable() { value = 1 } }).IsEquals);
+
+            Assert.IsFalse(new EqualsBuilder().AppendBase(false).AppendMany(new bool[] { true }, new bool[] { true }).IsEquals);
         }
 
         /// <summary>
@@ -78,8 +80,8 @@ namespace Capgemini.CommonObjectUtils.Tests
         public void EqualsBuilder_AppendMany_NotIEquatable()
         {
             var comparer = new NotEquatableComparer();
-            List<NotEquatable> nullNotEquatableList = null;
-            var notEquatable = new NotEquatable() { value = 1 };
+            List<NotEquatable> nullNotEquatableList = null; 
+            var controlObject = new NotEquatable() { value = 1 }; 
             var notEquatable2 = new NotEquatable() { value = 2 };
 
             Assert.IsTrue(new EqualsBuilder()
@@ -87,32 +89,32 @@ namespace Capgemini.CommonObjectUtils.Tests
                 .IsEquals);
 
             Assert.IsTrue(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { notEquatable },
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
+                new List<NotEquatable>() { controlObject },
                 comparer).IsEquals);
 
             Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 null,
                 comparer).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 new List<NotEquatable>() { null },
                 comparer).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(
                 new List<NotEquatable>() { null },
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 comparer).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(
                 null,
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 comparer).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 new List<NotEquatable>() { notEquatable2 },
                 comparer).IsEquals);
             Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { notEquatable },
+                new List<NotEquatable>() { controlObject },
                 new List<NotEquatable>(),
                 comparer).IsEquals);
         }
@@ -121,7 +123,7 @@ namespace Capgemini.CommonObjectUtils.Tests
         /// Tests the AppendSuper method.
         /// </summary>
         [TestMethod]
-        public void EqualsBuilder_AppendSuper()
+        public void EqualsBuilder_AppendBase()
         {
             EqualsBuilder builder = new EqualsBuilder();
 
@@ -130,6 +132,10 @@ namespace Capgemini.CommonObjectUtils.Tests
             builder.AppendBase(true);
 
             Assert.IsTrue(builder.IsEquals);
+
+            builder.AppendBase(false);
+
+            Assert.IsFalse(builder.IsEquals);
 
             builder.AppendBase(false);
 
