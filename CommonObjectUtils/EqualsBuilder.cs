@@ -106,7 +106,7 @@ namespace Capgemini.CommonObjectUtils
             IEnumerable<T> right,
             Func<T, T, bool> equalityFunc)
         {
-            bool result;
+            bool result = true;
 
             if (ReferenceEquals(left, right))
             {
@@ -116,18 +116,51 @@ namespace Capgemini.CommonObjectUtils
             {
                 result = false;
             }
-            else if (left.Count() != right.Count())
-            {
-                result = false;
-            }
             else
             {
-                var deepEquals = left.Zip(right, equalityFunc);
-
-                result = deepEquals.All(r => r);
+                result = AreEnumerationsEqual<T>(left, right, equalityFunc);
             }
 
             isEqual = isEqual && result;
+        }
+
+        private static bool AreEnumerationsEqual<T>(
+            IEnumerable<T> left, 
+            IEnumerable<T> right, 
+            Func<T, T, bool> equalityFunc)
+        {
+            var leftEnumerator = left.GetEnumerator();
+            var rightEnumerator = right.GetEnumerator();
+
+            int leftCount = 0;
+            int rightCount = 0;
+            var gotAnyItems = false;
+            var gotTwoItems = false;
+            do
+            {
+                var gotLeftItem = leftEnumerator.MoveNext();
+                var gotRightItem = rightEnumerator.MoveNext();
+
+                leftCount += gotLeftItem ? 1 : 0;
+                rightCount += gotRightItem ? 1 : 0;
+
+                gotAnyItems = gotLeftItem || gotRightItem;
+                gotTwoItems = gotLeftItem && gotRightItem;
+
+                if (gotTwoItems)
+                {
+                    var leftItem = leftEnumerator.Current;
+                    var rightItem = rightEnumerator.Current;
+                    var itemsEqual = equalityFunc(leftItem, rightItem);
+
+                    if (!itemsEqual)
+                    {
+                        return false;
+                    }
+                }
+            } while (gotAnyItems);
+
+            return leftCount == rightCount;
         }
 
         /// <summary>
