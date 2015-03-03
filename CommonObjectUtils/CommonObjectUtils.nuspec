@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Capgemini.CommonObjectUtils</id>
-    <version>1.1</version>
+    <version>1.2</version>
     <title>CommonObjectUtils</title>
     <authors>John Nash</authors>
     <owners>John Nash</owners>
@@ -11,11 +11,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .Net class library to make writing common object methods quicker and more consistent.</description>
     <releaseNotes>
-		Support for the Builder pattern with an abstract Builder base class that checks mandatory arguments are supplied before building starts.
-		Support for carrying out actions on each element of an IEnumerable object using the ForEach extension method.
-		Support for combining identical catch exception blocks by using the IsOneOf extension method for the Exception class.
-		The required .Net framework version has been reduced to 4.0.
+		Added an AppendMany method to the HashCodeBuilder to support hashing based on member enumerations.
+		Fixed a bug where passing null to EqualsBuilder.Append caused a NullReferenceException.
+		Added a new AppendMany overload to the EqualsBuilder to support comparing enumerations of objects that don't implement IEquatable.
+		Eliminated repeat enumerations in EqualsBuilder.AppendMany.
 	</releaseNotes>
-    <copyright>Copyright 2014</copyright>
+    <copyright>Copyright 2015</copyright>
   </metadata>
 </package>
