@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2014.5.31.0" projectFile="D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\CommonObjectUtilsHelp.shfbproj" started="12/09/2014 14:48:00">
+<shfbBuild product="Sandcastle Help File Builder" version="2014.5.31.0" projectFile="D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\CommonObjectUtilsHelp.shfbproj" started="04/03/2015 21:22:00">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -37,7 +37,7 @@ Generating API filter for MRefBuilder...
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 12/09/2014 13:48:00.
+Build started 04/03/2015 21:22:01.
 Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -46,7 +46,7 @@ GenerateRefInfo:
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Loaded 1 assemblies for reflection and 2 dependency assemblies.
-  Wrote information on 2 namespaces, 12 types, and 45 members
+  Wrote information on 2 namespaces, 12 types, and 47 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
@@ -56,13 +56,13 @@ Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Project
 
 Build succeeded.
 
-Time Elapsed 00:00:00.54
-    Last step completed in 00:00:00.6511
+Time Elapsed 00:00:00.53
+    Last step completed in 00:00:00.6240
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 12/09/2014 13:48:01.
+Build started 04/03/2015 21:22:02.
 Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2014.5.31.0)
@@ -82,12 +82,12 @@ Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Project
 
 Build succeeded.
 
-Time Elapsed 00:00:00.45
-    Last step completed in 00:00:00.5841
+Time Elapsed 00:00:00.43
+    Last step completed in 00:00:00.5380
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.2840
+    Last step completed in 00:00:00.1260
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -104,7 +104,9 @@ Generating conceptual topic files
     D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.0.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\7bcc2781-362c-45c5-b568-703b27eb172f.xml
     Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml&#39;
     D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\1510b232-6f98-4cd7-8f8e-4ebe5adfea2b.xml
-    Last step completed in 00:00:00.0950
+    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml&#39;
+    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\336ff80d-92bc-4b11-8309-2e61b2364e9f.xml
+    Last step completed in 00:00:00.0880
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
@@ -116,16 +118,16 @@ Creating conceptual topic configuration files...
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\icons\Help.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00.0080
+    Last step completed in 00:00:00.0110
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 12/09/2014 13:48:02.
+Build started 04/03/2015 21:22:02.
 Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2014.5.31.0)
@@ -136,27 +138,27 @@ Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Project
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.13
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.2060
+    Last step completed in 00:00:00.2370
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
     conceptual.config
-    Last step completed in 00:00:00.1050
+    Last step completed in 00:00:00.1280
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\sandcastle.config
 D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\conceptual.config
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.1830
+    Last step completed in 00:00:00.1760
 </buildStep>
 <buildStep step="BuildConceptualTopics">
 Building conceptual help topics...
 [C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 12/09/2014 13:48:02.
+Build started 04/03/2015 21:22:03.
 Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; on node 1 (default targets).
 BuildConceptualTopics:
   BuildAssembler (v2014.5.31.0)
@@ -164,19 +166,19 @@ BuildConceptualTopics:
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 4 topic(s)
+  Processed 5 topic(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
 Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.65
-    Last step completed in 00:00:05.0045
+Time Elapsed 00:00:04.37
+    Last step completed in 00:00:04.6013
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 12/09/2014 13:48:07.
+Build started 04/03/2015 21:22:08.
 Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2014.5.31.0)
@@ -188,7 +190,7 @@ BuildAssembler : warning : ResolveReferenceLinksComponent: [N:Capgemini.CommonOb
 BuildAssembler : warning : ResolveReferenceLinksComponent: [N:Capgemini.CommonObjectUtils] Invalid reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Capgemini.CommonObjectUtils.MissingBuilderArgumentException] Unknown reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Capgemini.CommonObjectUtils.MissingBuilderArgumentException] Invalid reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
-  Processed 80 topic(s)
+  Processed 83 topic(s)
   4 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 2 of 30.
@@ -196,14 +198,14 @@ Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Project
 
 Build succeeded.
 
-Time Elapsed 00:00:10.34
-    Last step completed in 00:00:10.4410
+Time Elapsed 00:00:09.33
+    Last step completed in 00:00:09.4465
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:00.0740
+    Last step completed in 00:00:00.0630
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -215,11 +217,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website
-Processed 84 HTML files
+Processed 88 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\WebKI.xml
 Saving website table of contents to D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00.4390
+    Last step completed in 00:00:00.3430
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -299,34 +301,34 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocOpen.gif
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00.7611
+    Last step completed in 00:00:00.5290
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00.4080
+</plugIn>    Last step completed in 00:00:00.3570
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 100 files
 Copied 200 files
-Copied 214 files for the website content
-    Last step completed in 00:00:00.2140
+Copied 219 files for the website content
+    Last step completed in 00:00:00.2330
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0620
+    Last step completed in 00:00:00.0640
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 09/12/2014 02:48 PM.  Total time: 00:00:20.1510
+Build completed successfully at 03/04/2015 09:22 PM.  Total time: 00:00:18.1510
 
 </buildStep>
 </shfbBuild>

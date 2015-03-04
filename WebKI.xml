@@ -15,12 +15,13 @@
     <HelpKINode Title="HashCodeBuilder.AppendBase Method " Url="html/de10530c-75a5-0f07-2f84-c3cb2b066e77.htm" />
     <HelpKINode Title="ToStringBuilder.AppendBase Method " Url="html/1f0ce627-309b-d8df-f9ba-780607ffa292.htm" />
   </HelpKINode>
+  <HelpKINode Title="AppendMany method" Url="html/4badf487-cb37-8586-302c-89cad60fe348.htm" />
   <HelpKINode Title="AppendMany(Of T) method">
-    <HelpKINode Title="EqualsBuilder.AppendMany(T) Method " Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
+    <HelpKINode Title="HashCodeBuilder.AppendMany(T) Method " Url="html/443b7e36-acf0-22d3-55ad-2ed9674ba999.htm" />
     <HelpKINode Title="ToStringBuilder.AppendMany(T) Method " Url="html/2ebdb5af-53bb-4a4a-9c3a-fdb58f5ca785.htm" />
   </HelpKINode>
   <HelpKINode Title="AppendMany&lt;T&gt; method">
-    <HelpKINode Title="EqualsBuilder.AppendMany(T) Method " Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
+    <HelpKINode Title="HashCodeBuilder.AppendMany(T) Method " Url="html/443b7e36-acf0-22d3-55ad-2ed9674ba999.htm" />
     <HelpKINode Title="ToStringBuilder.AppendMany(T) Method " Url="html/2ebdb5af-53bb-4a4a-9c3a-fdb58f5ca785.htm" />
   </HelpKINode>
   <HelpKINode Title="Build method" Url="html/c60b5bf8-676a-90de-86d3-68b165b98504.htm" />
@@ -84,8 +85,7 @@
   <HelpKINode Title="EqualsBuilder.Append(Of T) method" Url="html/63870934-faa0-596e-d750-c4647c8ea3e5.htm" />
   <HelpKINode Title="EqualsBuilder.Append&lt;T&gt; method" Url="html/63870934-faa0-596e-d750-c4647c8ea3e5.htm" />
   <HelpKINode Title="EqualsBuilder.AppendBase method" Url="html/122af4aa-ec88-827e-c188-3d30c91d90f8.htm" />
-  <HelpKINode Title="EqualsBuilder.AppendMany(Of T) method" Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
-  <HelpKINode Title="EqualsBuilder.AppendMany&lt;T&gt; method" Url="html/cc5a52a9-a1f3-6474-8226-1b807607d812.htm" />
+  <HelpKINode Title="EqualsBuilder.AppendMany method" Url="html/4badf487-cb37-8586-302c-89cad60fe348.htm" />
   <HelpKINode Title="EqualsBuilder.EqualsBuilder constructor" Url="html/03e0c886-9477-cf6d-37f4-b13de72522aa.htm" />
   <HelpKINode Title="EqualsBuilder.IsEquals property" Url="html/a5956b13-17e1-0d2b-c20e-0f0c7928166a.htm" />
   <HelpKINode Title="EqualsBuilder.Reset method" Url="html/dc6e9dc9-626b-d56b-5e07-1d26f91f9683.htm" />
@@ -143,6 +143,8 @@
   </HelpKINode>
   <HelpKINode Title="HashCodeBuilder.Append method" Url="html/28c46be4-b1b6-a7e7-c43b-039adfea31fb.htm" />
   <HelpKINode Title="HashCodeBuilder.AppendBase method" Url="html/de10530c-75a5-0f07-2f84-c3cb2b066e77.htm" />
+  <HelpKINode Title="HashCodeBuilder.AppendMany(Of T) method" Url="html/443b7e36-acf0-22d3-55ad-2ed9674ba999.htm" />
+  <HelpKINode Title="HashCodeBuilder.AppendMany&lt;T&gt; method" Url="html/443b7e36-acf0-22d3-55ad-2ed9674ba999.htm" />
   <HelpKINode Title="HashCodeBuilder.GetHashCode method" Url="html/35781797-34d4-7387-1971-523c6c157bb9.htm" />
   <HelpKINode Title="HashCodeBuilder.HashCodeBuilder constructor" Url="html/68dd3606-7d0b-98e2-303d-c155e96bbfba.htm" />
   <HelpKINode Title="IsEquals property" Url="html/a5956b13-17e1-0d2b-c20e-0f0c7928166a.htm" />
