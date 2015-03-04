@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonObjectUtilsTests", "CommonObjectUtilsTests\CommonObjectUtilsTests.csproj", "{C38F5A14-69F5-4CEB-9C12-618C202DC2AB}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "CommonObjectUtilsHelp", "CommonObjectUtilsHelp\CommonObjectUtilsHelp.shfbproj", "{DFD781FB-998D-4AFA-835D-AB31D6EDF4CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D254159E-B3C4-4E42-B0C4-8A4CA1200A66} = {D254159E-B3C4-4E42-B0C4-8A4CA1200A66}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
