@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Capgemini.CommonObjectUtils</id>
-    <version>1.2</version>
+    <version>1.2.1</version>
     <title>CommonObjectUtils</title>
     <authors>John Nash</authors>
     <owners>John Nash</owners>
