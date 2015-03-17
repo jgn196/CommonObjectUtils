@@ -56,6 +56,7 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="EqualsBuilder.cs" />
     <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="MemoryPipe.cs" />
     <Compile Include="MissingBuilderArgument.cs" />
     <Compile Include="Testing\ErrorTester.cs" />
     <Compile Include="Testing\ErrorTestException.cs" />
