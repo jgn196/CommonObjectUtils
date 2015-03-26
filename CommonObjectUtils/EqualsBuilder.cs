@@ -96,8 +96,8 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
-            CommonAppendMany<T>(left, right, (l, r) => l != null && l.Equals(r));
-
+            CommonAppendMany<T>(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
+            
             return this;
         }
 

@@ -1,195 +1,157 @@
-﻿using System.Collections.Generic;
-
-using Capgemini.CommonObjectUtils;
+﻿using Capgemini.CommonObjectUtils;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
-namespace Capgemini.CommonObjectUtils.Tests
+namespace EqualsBuilderSpecification
 {
-    /// <summary>
-    /// Tests the EqualsBuilder class.
-    /// </summary>
     [TestClass]
-    public class EqualsBuilderTests
+    public class AnEmptyEqualsBuilder
     {
-        /// <summary>
-        /// Tests comparing objects.
-        /// </summary>
         [TestMethod]
-        public void EqualsBuilder_Append()
+        public void ReportsEquality()
         {
-            Assert.IsTrue(new EqualsBuilder().Append(true, true).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append(false, false).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().Append(false, true).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append(true, false).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().Append(false, true).Append(true, true).IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().Append((byte)1, (byte)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((short)1, (short)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((int)1, (int)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((long)1, (long)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((float)1.0, (float)1.0).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((double)1, (double)1).IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().Append((ushort)1, (ushort)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((uint)1, (uint)1).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append((ulong)1, (ulong)1).IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().Append('c', 'c').IsEquals);
-            Assert.IsTrue(new EqualsBuilder().Append("foo", "foo").IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().Append((string)null, null).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append(null, "foo").IsEquals);
-            Assert.IsFalse(new EqualsBuilder().Append("foo", null).IsEquals);
+            GivenAnEmptyEqualBuilder().IsEquals.Should().BeTrue();
         }
 
-        /// <summary>
-        /// Tests comparing enumerable objects that implement IEquatable.
-        /// </summary>
+        private static EqualsBuilder GivenAnEmptyEqualBuilder()
+        {
+            return new EqualsBuilder();
+        }
+    }
+
+    [TestClass]
+    public class AnEqualsBuilderThatReportsEquality
+    {
         [TestMethod]
-        public void EqualsBuilder_AppendEnumerables()
+        public void ContinuesToReportEqualityWhenEqualObjectsAreAppended()
         {
-            Assert.IsTrue(new EqualsBuilder().AppendMany((bool[])null, (bool[])null).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { true }, new bool[] { true }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { false }, new bool[] { false }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { true, true }, new bool[] { true, true }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[] { false, false }, new bool[] { false, false }).IsEquals);
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new bool[0], new bool[0]).IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new List<bool>() { true }, new List<bool>() { true }).IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().AppendMany(new HashSet<bool>() { true }, new HashSet<bool>() { true }).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true }, null).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(null, new bool[] { true }).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true }, new bool[] { true, true }).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(new bool[] { true, true }, new bool[] { true, false }).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { new Equatable() { value = 1 } }, new Equatable[] { null }).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(new Equatable[] { null }, new Equatable[] { new Equatable() { value = 1 } }).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().AppendBase(false).AppendMany(new bool[] { true }, new bool[] { true }).IsEquals);
+            GivenAnEqualsBuilderThatReportsEquality().Append("foo", "foo").IsEquals.Should().BeTrue();
         }
 
-        /// <summary>
-        /// Tests comparing enumerable objects that don't implement IEquatable.
-        /// </summary>
+        private static EqualsBuilder GivenAnEqualsBuilderThatReportsEquality()
+        {
+            return new EqualsBuilder();
+        }
+
         [TestMethod]
-        public void EqualsBuilder_AppendMany_NotIEquatable()
+        public void ReportsInequalityWhenUnequalObjectsAreAppended()
         {
-            var comparer = new NotEquatableComparer();
-            List<NotEquatable> nullNotEquatableList = null; 
-            var controlObject = new NotEquatable() { value = 1 }; 
-            var notEquatable2 = new NotEquatable() { value = 2 };
-
-            Assert.IsTrue(new EqualsBuilder()
-                .AppendMany(nullNotEquatableList, nullNotEquatableList, comparer)
-                .IsEquals);
-
-            Assert.IsTrue(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { controlObject },
-                new List<NotEquatable>() { controlObject },
-                comparer).IsEquals);
-
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { controlObject },
-                null,
-                comparer).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { controlObject },
-                new List<NotEquatable>() { null },
-                comparer).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { null },
-                new List<NotEquatable>() { controlObject },
-                comparer).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                null,
-                new List<NotEquatable>() { controlObject },
-                comparer).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { controlObject },
-                new List<NotEquatable>() { notEquatable2 },
-                comparer).IsEquals);
-            Assert.IsFalse(new EqualsBuilder().AppendMany(
-                new List<NotEquatable>() { controlObject },
-                new List<NotEquatable>(),
-                comparer).IsEquals);
+            GivenAnEqualsBuilderThatReportsEquality().Append("foo", "bar").IsEquals.Should().BeFalse();
         }
 
-        /// <summary>
-        /// Tests the AppendSuper method.
-        /// </summary>
         [TestMethod]
-        public void EqualsBuilder_AppendBase()
+        public void ReportsEqualityWhenABaseEqualityIsAppended()
         {
-            EqualsBuilder builder = new EqualsBuilder();
-
-            Assert.IsTrue(builder.IsEquals);
-
-            builder.AppendBase(true);
-
-            Assert.IsTrue(builder.IsEquals);
-
-            builder.AppendBase(false);
-
-            Assert.IsFalse(builder.IsEquals);
-
-            builder.AppendBase(false);
-
-            Assert.IsFalse(builder.IsEquals);
+            GivenAnEqualsBuilderThatReportsEquality().AppendBase(true).IsEquals.Should().BeTrue();
         }
 
-        /// <summary>
-        /// Tests the Reset method.
-        /// </summary>
         [TestMethod]
-        public void EqualsBuilder_Reset()
+        public void ReportsInequalityWhenABaseInequalityIsAppended()
         {
-            EqualsBuilder builder = new EqualsBuilder();
-            builder.AppendBase(false);
-
-            Assert.IsFalse(builder.IsEquals);
-
-            builder.Reset();
-
-            Assert.IsTrue(builder.IsEquals);
+            GivenAnEqualsBuilderThatReportsEquality().AppendBase(false).IsEquals.Should().BeFalse();
         }
 
-        private class Equatable : IEquatable<Equatable>
+        [TestMethod]
+        public void ReportsEqualityWhenEnumerablesContainingIdenticalCollectionsAreAppended()
         {
-            public int value;
+            GivenAnEqualsBuilderThatReportsEquality()
+                .AppendMany(new[] { "foo" }, new[] { "foo" }).IsEquals.Should().BeTrue();
+        }
+    }
 
-            public bool Equals(Equatable other)
-            {
-                if (other == null)
-                {
-                    return false;
-                }
-                return value == other.value;
-            }
+    [TestClass]
+    public class AnEqualsBuilder
+    {
+        [TestMethod]
+        public void ConsidersTheSameObjectAsEqualWhenAppended()
+        {
+            var sameObject = "foo";
+            GivenAnEqualsBuilder().Append(sameObject, sameObject).IsEquals.Should().BeTrue();
         }
 
-        private class NotEquatable
+        private static EqualsBuilder GivenAnEqualsBuilder()
         {
-            public int value;
+            return new EqualsBuilder();
         }
+
+        [TestMethod]
+        public void ConsidersTwoNullsAsEqualWhenAppended()
+        {
+            GivenAnEqualsBuilder().Append<string>(null, null).IsEquals.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ConsidersANullAndObjectAsUnequalWhenAppended()
+        {
+            GivenAnEqualsBuilder().Append(null, "foo").IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ConsidersEnumerablesWithDifferentCountsAsUnequalWhenAppended()
+        {
+            GivenAnEqualsBuilder()
+                .AppendMany(new[] { "f00" }, new[] { "foo", "foo" }).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ConsidersEnumberablesWithDifferentContentsAsUnequalWhenAppended()
+        {
+            GivenAnEqualsBuilder().AppendMany(new[] { "foo" }, new[] { "bar" }).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ConsidersANullAsDifferentToAnObjectInAppendedEnumerables()
+        {
+            GivenAnEqualsBuilder()
+                .AppendMany(new string[] { null }, new[] { "foo" }).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ConsidersTwoNullsAsEqualInAppendedEnumerables()
+        {
+            GivenAnEqualsBuilder()
+                .AppendMany(new string[] { null }, new string[] { null }).IsEquals.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ConsidersTheSameEnumerableAsEqualWhenAppended()
+        {
+            var theSame = new[] { "foo" };
+            GivenAnEqualsBuilder().AppendMany(theSame, theSame).IsEquals.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ConsidersANullEnumerableAsUnequalToAnEnumerableWhenAppended()
+        {
+            GivenAnEqualsBuilder().AppendMany(null, new[] { "foo" }).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ConsidersTwoNullEnumerablesAsEqualWhenAppended()
+        {
+            GivenAnEqualsBuilder().AppendMany((string[])null, null).IsEquals.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void UsesSuppliedComparerWhenAppendingNonEquatableEnumerables()
+        {
+            GivenAnEqualsBuilder()
+                .AppendMany(
+                    new[] { new NotEquatable() },
+                    new[] { new NotEquatable() },
+                    new NotEquatableComparer())
+                .IsEquals.Should().BeTrue();
+        }
+
+        private class NotEquatable { }
 
         private class NotEquatableComparer : IEqualityComparer<NotEquatable>
         {
             public bool Equals(NotEquatable x, NotEquatable y)
             {
-                if (x == null && y == null)
-                {
-                    return true;
-                }
-                if (x == null || y == null)
-                {
-                    return false;
-                }
-                return x.value == y.value;
+                return true;
             }
 
             public int GetHashCode(NotEquatable obj)
@@ -197,6 +159,61 @@ namespace Capgemini.CommonObjectUtils.Tests
                 throw new NotImplementedException();
             }
         }
+    }
 
+    [TestClass]
+    public class AnEqualsBuilderThatReportsInequality
+    {
+        [TestMethod]
+        public void ContinuesToReportInequalityWhenEqualObjectsAreAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality().Append("foo", "foo").IsEquals.Should().BeFalse();
+        }
+
+        private static EqualsBuilder GivenAnEqualsBuilderThatReportsInequality()
+        {
+            return new EqualsBuilder().Append("foo", "bar");
+        }
+
+        [TestMethod]
+        public void ContinuesToReportInequalityWhenUnequalObjectsAreAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality().Append("foo", "bar").IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ReportsEqualityAfterItIsReset()
+        {
+            var builder = GivenAnEqualsBuilderThatReportsInequality();
+            builder.Reset();
+
+            builder.IsEquals.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void ContinuesToReportInequalityWhenABaseEqualityIsAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality().AppendBase(true).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ContinuesToReportInequalityWhenABaseInequalityIsAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality().AppendBase(false).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ContinuesToReportInequalityWhenEqualEnumerablesAreAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality()
+                .AppendMany(new[] { "foo" }, new[] { "foo" }).IsEquals.Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void ContinuesToReportInEqualityWhenUnequalEnumerablesAreAppended()
+        {
+            GivenAnEqualsBuilderThatReportsInequality()
+                .AppendMany(new[] { "foo" }, new[] { "bar" }).IsEquals.Should().BeFalse();
+        }
     }
 }
