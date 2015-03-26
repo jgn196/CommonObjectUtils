@@ -77,20 +77,5 @@ namespace Capgemini.CommonObjectUtils.Tests
             
             return pipe;
         }
-
-        /// <summary>
-        /// Tests that the pipe doesn't hang on to memory it doesn't need.
-        /// </summary>
-        [TestMethod]
-        public void MemoryPipe_DoesntLeakMemory()
-        {
-            var pipe = Build1KPipe();
-
-            long memoryMark = GC.GetTotalMemory(true);
-
-            pipe.Read(Kilobyte);
-
-            Assert.IsTrue(GC.GetTotalMemory(true) < memoryMark);
-        }
     }
 }
