@@ -24,16 +24,14 @@ namespace Capgemini.CommonObjectUtils
         /// myItems.ForEach((x) => Console.WriteLine(x));
         /// </code>
         /// </example>
-        [SuppressMessage("Microsoft.Design", "CA1062", MessageId = "1", Justification = "Argument validated")]
-        [SuppressMessage("Microsoft.Design", "CA1062", MessageId = "0", Justification = "Argument validated")]
         public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
         {
-            Condition.Requires(enumerable).IsNotNull();
-            Condition.Requires(action).IsNotNull();
+            if (enumerable == null) throw new NullReferenceException("Called ForEach on a null enumerable.");
+            if (action == null) return;
 
-            foreach (T t in enumerable)
+            foreach (var item in enumerable)
             {
-                action(t);
+                action(item);
             }
         }
     }

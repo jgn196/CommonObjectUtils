@@ -1,59 +1,74 @@
-﻿using System;
+﻿using Capgemini.CommonObjectUtils;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Rhino.Mocks;
+using System;
 using System.Collections.Generic;
 
-using Capgemini.CommonObjectUtils.Testing;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Capgemini.CommonObjectUtils.Tests
+namespace EnumerableExtensionsSpecification
 {
-    /// <summary>
-    /// Tests the EnumerableExtensions class.
-    /// </summary>
     [TestClass]
-    public class EnumerableExtensionsTests
+    public class AnEmptyEnumerable
     {
-        /// <summary>
-        /// Tests that the ForEach method catches null arguments.
-        /// </summary>
         [TestMethod]
-        public void EnumerableExtensions_ForEach_NullArgs()
+        public void DoesNotCallTheForEachAction()
         {
-            IEnumerable<int> nullEnumerable = null;
-            Action<int> doNothing = (x) => { };
+            var action = MockRepository.GenerateMock<Action<string>>();
 
-            new ErrorTester()
-                .Test(typeof(ArgumentNullException), () => nullEnumerable.ForEach(doNothing))
-                .Test(typeof(ArgumentNullException), () => new List<int>().ForEach(null));
+            GivenAnEmptyEnumerable().ForEach(action);
+
+            action.AssertWasNotCalled(a => a.Invoke(Arg<string>.Is.Anything));
         }
 
-        /// <summary>
-        /// Tests that the ForEach method does nothing when applied to an empty enumeration.
-        /// </summary>
-        [TestMethod]
-        public void EnumerableExtensions_ForEach_Empty()
+        private static IEnumerable<string> GivenAnEmptyEnumerable()
         {
-            int actionCallCount = 0;
-            Action<int> countCalls = (x) => { actionCallCount++; };
+            return new string[0];
+        }
+    }
 
-            new List<int>().ForEach(countCalls);
+    [TestClass]
+    public class AnEnumerable
+    {
+        [TestMethod]
+        public void CallsTheForEachActionWithEachItem()
+        {
+            var action = MockRepository.GenerateMock<Action<string>>();
+            action.Expect(a => a.Invoke("foo"));
+            action.Expect(a => a.Invoke("bar"));
 
-            Assert.AreEqual(0, actionCallCount);
+            GivenAnEnumerable().ForEach(action);
+
+            action.VerifyAllExpectations();
         }
 
-        /// <summary>
-        /// Tests that the ForEach method calls the action argument for each element in the 
-        /// enumeration.
-        /// </summary>
-        [TestMethod]
-        public void EnumerableExtensions_ForEach()
+        private static IEnumerable<string> GivenAnEnumerable()
         {
-            List<int> list = new List<int>() { 1, 2, 3 };
-            List<int> copyList = new List<int>();
-            Action<int> copy = (x) => copyList.Add(x);
-
-            new List<int>() { 1, 2, 3 }.ForEach(copy);
-
-            CollectionAssert.AreEqual(list, copyList);
+            return new[] { "foo", "bar" };
         }
+
+        [TestMethod]
+        public void DoesNotEnumerateWhenPassedANullForEachAction()
+        {
+            var enumerable = MockRepository.GenerateMock<IEnumerable<string>>();
+
+            enumerable.ForEach(null);
+
+            enumerable.AssertWasNotCalled(e => e.GetEnumerator());
+        }
+    }
+
+    [TestClass]
+    public class ANullEnumerable
+    {
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void ThrowsNullReferenceExceptionWhenForEachIsCalled()
+        {
+            GivenANullEnumerable().ForEach(s => { });
+        }
+
+        private static IEnumerable<string> GivenANullEnumerable()
+        {
+            return null;
+        } 
     }
 }
