@@ -1,98 +1,113 @@
-﻿using System;
+﻿using Capgemini.CommonObjectUtils;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Capgemini.CommonObjectUtils.Tests
+namespace BuilderSpecification
 {
-    /// <summary>
-    /// Tests the Builder class.
-    /// </summary>
     [TestClass]
-    public class BuilderTests
+    public class ABuilder
     {
-        /// <summary>
-        /// Tests a build with all arguments.
-        /// </summary>
         [TestMethod]
-        public void Builder_Build()
+        public void CallsTheBuildImplementationWhenBuilding()
         {
-            Assert.AreEqual(12, new IntBuilder().SetValue(4).SetMultiplier(3).Build());
+            var builder = GivenABuilderWithNoExpectations();
+
+            builder.Build();
+
+            builder.WasImplementationCalled.Should().BeTrue();
         }
 
-        /// <summary>
-        /// Tests that mandatory arguments can't be omitted.
-        /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(MissingBuilderArgumentException))]
-        public void Builder_BuildMissingMandatoryArguments()
+        private static TestBuilder GivenABuilderWithNoExpectations()
         {
-            new IntBuilder()
-                .SetMultiplier(3)
-                .Build();
+            return new TestBuilder();
         }
 
-        /// <summary>
-        /// Tests that optional arguments may be omitted.
-        /// </summary>
-        [TestMethod]
-        public void Builder_BuildMissingOptionalArguments()
+        private class TestBuilder : Builder<string>
         {
-            Assert.AreEqual(4, new IntBuilder().SetValue(4).Build());
-        }
+            public bool WasImplementationCalled { get; private set; }
 
-        /// <summary>
-        /// A simple test Builder.
-        /// </summary>
-        private class IntBuilder : Builder<int>
-        {
-            /// <summary>
-            /// The value to give the built integer.
-            /// </summary>
-            private int value;
-
-            /// <summary>
-            /// The (optional) value to multiply the built integer by.
-            /// </summary>
-            private int multiplier;
-
-            /// <summary>
-            /// Initializes a new instance of the <see cref="IntBuilder"/> class.
-            /// </summary>
-            public IntBuilder()
+            protected override string BuildImplementation()
             {
-                Expect("value", Necessity.Mandatory);
-                Expect("multiplier", Necessity.Optional);
-            }
-
-            /// <summary>
-            /// Sets the built integer value.
-            /// </summary>
-            /// <param name="value">The value to give built integers.</param>
-            /// <returns>This builder for chaining calls.</returns>
-            public IntBuilder SetValue(int value)
-            {
-                this.value = Receive("value", value);
-                return this;
-            }
-
-            /// <summary>
-            /// Sets the built integer multiplier.
-            /// </summary>
-            /// <param name="multiplier">The value to multiply the built integer by.</param>
-            /// <returns>This builder for chaining calls.</returns>
-            public IntBuilder SetMultiplier(int multiplier)
-            {
-                this.multiplier = Receive("multiplier", multiplier);
-                return this;
-            }
-
-            /// <summary>
-            /// The building implementation.
-            /// </summary>
-            /// <returns>The new integer.</returns>
-            protected override int BuildImplementation()
-            {
-                return value * (Got("multiplier") ? multiplier : 1);
+                WasImplementationCalled = true;
+                return "foo";
             }
         }
     }
+
+    [TestClass]
+    public class ABuilderWithMandatoryExpectations
+    {
+        [TestMethod]
+        [ExpectedException(typeof(MissingBuilderArgumentException))]
+        public void ThrowsAnExceptionIfAnyAreMissingWhenBuilding()
+        {
+            new TestBuilder().Build();
+        }
+
+        [TestMethod]
+        public void BuildsAfterItGetsThem()
+        {
+            new TestBuilder().SetFoo("bar").Build();
+        }
+
+        private class TestBuilder : Builder<string>
+        {
+            private string foo;
+            public TestBuilder()
+            {
+                Expect("foo", Necessity.Mandatory);
+            }
+
+            public TestBuilder SetFoo(string foo)
+            {
+                this.foo = Receive("foo", foo);
+                return this;
+            }
+
+            protected override string BuildImplementation()
+            {
+                return foo;
+            }
+        }
+    }
+
+    [TestClass]
+    public class ABuilderWithOptionalExpectations
+    {
+        [TestMethod]
+        public void BuildsWithoutThem()
+        {
+            new TestBuilder().Build();
+        }
+
+        [TestMethod]
+        public void CanTellIfItGotThem()
+        {
+            new TestBuilder().SetFoo("bar").GotFoo.Should().BeTrue();
+        }
+
+        private class TestBuilder : Builder<string>
+        {
+            private string foo;
+
+            public bool GotFoo { get { return Got("foo"); } }
+
+            public TestBuilder()
+            {
+                Expect("foo", Necessity.Optional);
+            }
+
+            public TestBuilder SetFoo(string foo)
+            {
+                this.foo = Receive("foo", foo);
+                return this;
+            }
+
+            protected override string BuildImplementation()
+            {
+                return foo ?? "";
+            }
+        }
+    }
+
 }
