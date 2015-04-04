@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Capgemini.CommonObjectUtils
 {
@@ -38,12 +37,12 @@ namespace Capgemini.CommonObjectUtils
         /// <summary>
         /// The value to multiply the hash code by while adding each field value.
         /// </summary>
-        private readonly int multiplierOddNumber;
+        private readonly int _multiplierOddNumber;
 
         /// <summary>
         /// The calculated hash code that is updated during Append method calls.
         /// </summary>
-        private int hashCode;
+        private int _hashCode;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HashCodeBuilder"/> class.
@@ -60,8 +59,8 @@ namespace Capgemini.CommonObjectUtils
         /// <param name="multiplierOddNumber">The value to multiply the hash code by as field values are appended.</param>
         public HashCodeBuilder(int initialOddNumber, int multiplierOddNumber)
         {
-            hashCode = initialOddNumber;
-            this.multiplierOddNumber = multiplierOddNumber;
+            _hashCode = initialOddNumber;
+            _multiplierOddNumber = multiplierOddNumber;
         }
 
         /// <summary>
@@ -78,7 +77,7 @@ namespace Capgemini.CommonObjectUtils
         {
             if (value != null)
             {
-                hashCode = (hashCode * multiplierOddNumber) + value.GetHashCode();
+                _hashCode = (_hashCode * _multiplierOddNumber) + value.GetHashCode();
             }
 
             return this;
@@ -118,7 +117,7 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The HashCodeBuilder for chaining calls.</returns>
         public HashCodeBuilder AppendBase(int baseHashCode)
         {
-            hashCode = (hashCode * multiplierOddNumber) + baseHashCode;
+            _hashCode = (_hashCode * _multiplierOddNumber) + baseHashCode;
 
             return this;
         }
@@ -138,7 +137,8 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The computed hash code.</returns>
         public override int GetHashCode()
         {
-            return hashCode;
+            // ReSharper disable once NonReadonlyMemberInGetHashCode
+            return _hashCode;
         }
     }
 }
