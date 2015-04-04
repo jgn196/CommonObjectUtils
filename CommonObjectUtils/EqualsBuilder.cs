@@ -64,8 +64,8 @@ namespace Capgemini.CommonObjectUtils
         /// </summary>
         /// <remarks>
         /// Don't pass arrays, lists or other collections to this method as the top level objects will be compared rather than
-        /// the contents. Instead call <see cref="AppendMany"/>.</remarks>
-        /// <seealso cref="AppendMany"/>
+        /// the contents. Instead call <see cref="AppendMany{T}(IEnumerable{T}, IEnumerable{T})"/>.</remarks>
+        /// <seealso cref="AppendMany{T}(IEnumerable{T}, IEnumerable{T})"/>
         /// <typeparam name="T">The type of the objects.</typeparam>
         /// <param name="left">The left hand object.</param>
         /// <param name="right">The right hand object.</param>

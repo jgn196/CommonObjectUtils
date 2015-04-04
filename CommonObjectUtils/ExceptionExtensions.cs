@@ -60,10 +60,13 @@ namespace Capgemini.CommonObjectUtils
         /// }
         /// </code>
         /// </example>
-        [SuppressMessage("Microsoft.Design", "CA1062", MessageId = "0", Justification = "Argument validated")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes"), SuppressMessage("Microsoft.Design", "CA1062", MessageId = "0", Justification = "Argument validated")]
         public static bool IsOneOf(this Exception exception, params Type[] argsRest)
         {
-            Condition.Requires(exception).IsNotNull();
+            if (exception == null)
+            {
+                throw new NullReferenceException("Object reference not set to an instance of an object.");
+            }
             Condition.Requires(argsRest).IsNotNull();
 
             Type exceptionType = exception.GetType();

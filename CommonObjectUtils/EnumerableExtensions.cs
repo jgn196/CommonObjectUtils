@@ -24,9 +24,10 @@ namespace Capgemini.CommonObjectUtils
         /// myItems.ForEach((x) => Console.WriteLine(x));
         /// </code>
         /// </example>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes")]
         public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
         {
-            if (enumerable == null) throw new NullReferenceException("Called ForEach on a null enumerable.");
+            if (enumerable == null) throw new NullReferenceException("Object reference not set to an instance of an object.");
             if (action == null) return;
 
             foreach (var item in enumerable)

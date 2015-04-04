@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 
+// ReSharper disable once CheckNamespace
 namespace EqualsBuilderSpecification
 {
     [TestClass]
@@ -67,7 +68,7 @@ namespace EqualsBuilderSpecification
         [TestMethod]
         public void ConsidersTheSameObjectAsEqualWhenAppended()
         {
-            var sameObject = "foo";
+            const string sameObject = "foo";
             GivenAnEqualsBuilder().Append(sameObject, sameObject).IsEquals.Should().BeTrue();
         }
 

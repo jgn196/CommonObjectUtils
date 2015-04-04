@@ -1,47 +1,55 @@
 ﻿using System;
-
-using Capgemini.CommonObjectUtils.Testing;
+using System.IO;
+using Capgemini.CommonObjectUtils;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Capgemini.CommonObjectUtils.Tests
+// ReSharper disable once CheckNamespace
+namespace ExceptionSpecification
 {
-    /// <summary>
-    /// Tests the ExceptionExtensions class.
-    /// </summary>
     [TestClass]
-    public class ExceptionExtensionsTests
+    public class AnException
     {
-        /// <summary>
-        /// Tests passing various bad arguments to the IsOneOf method.
-        /// </summary>
         [TestMethod]
-        public void ExceptionExtensions_IsOneOf_BadArgs()
+        public void IsOneOfItself()
         {
-            new ErrorTester()
-                .Test(typeof(ArgumentNullException), () => ((Exception)null).IsOneOf(typeof(Exception)))
-                .Test(typeof(ArgumentNullException), () => new Exception().IsOneOf(null));
+            new Exception().IsOneOf(typeof (Exception)).Should().BeTrue();
         }
 
-        /// <summary>
-        /// Tests the IsOneOf method.
-        /// </summary>
         [TestMethod]
-        public void ExceptionExtensions_IsOneOf()
+        public void IsOneOfItsSuperClass()
         {
-            Exception exception = new ArgumentException();
+            new FileNotFoundException().IsOneOf(typeof (IOException)).Should().BeTrue();
+        }
 
-            Assert.IsFalse(exception.IsOneOf());
-            Assert.IsFalse(exception.IsOneOf(typeof(ArgumentNullException)));
-            Assert.IsFalse(exception.IsOneOf(
-                typeof(InvalidOperationException), 
-                typeof(ArgumentNullException)));
-            Assert.IsFalse(exception.IsOneOf(typeof(uint)));
+        [TestMethod]
+        public void IsNotOneOfItsSubClass()
+        {
+            new IOException().IsOneOf(typeof (FileNotFoundException)).Should().BeFalse();
+        }
 
-            Assert.IsTrue(exception.IsOneOf(typeof(ArgumentException)));
-            Assert.IsTrue(exception.IsOneOf(typeof(Exception)));
-            Assert.IsTrue(exception.IsOneOf(
-                typeof(ArgumentNullException),
-                typeof(ArgumentException)));
+        [TestMethod]
+        public void IsNotOneOfUnrelatedClass()
+        {
+            new ArgumentException().IsOneOf(typeof (IOException)).Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void IsOneOfAnArrayOfClassesWhereTheOthersAreUnrelated()
+        {
+            new IOException().IsOneOf(typeof (ArgumentException), typeof (IOException))
+                .Should().BeTrue();
+        }
+    }
+
+    [TestClass]
+    public class ANullException
+    {
+        [TestMethod]
+        [ExpectedException(typeof (NullReferenceException))]
+        public void ThrowsNullReferenceExceptionWhenIsOneOfIsCalled()
+        {
+            ((Exception) null).IsOneOf(typeof (Exception));
         }
     }
 }

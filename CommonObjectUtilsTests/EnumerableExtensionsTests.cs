@@ -4,7 +4,8 @@ using Rhino.Mocks;
 using System;
 using System.Collections.Generic;
 
-namespace EnumerableExtensionsSpecification
+// ReSharper disable once CheckNamespace
+namespace EnumerableSpecification
 {
     [TestClass]
     public class AnEmptyEnumerable
@@ -50,8 +51,10 @@ namespace EnumerableExtensionsSpecification
         {
             var enumerable = MockRepository.GenerateMock<IEnumerable<string>>();
 
+            // ReSharper disable once PossibleMultipleEnumeration
             enumerable.ForEach(null);
 
+            // ReSharper disable once PossibleMultipleEnumeration
             enumerable.AssertWasNotCalled(e => e.GetEnumerator());
         }
     }

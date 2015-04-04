@@ -2,6 +2,7 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+// ReSharper disable once CheckNamespace
 namespace BuilderSpecification
 {
     [TestClass]
@@ -52,7 +53,7 @@ namespace BuilderSpecification
 
         private class TestBuilder : Builder<string>
         {
-            private string foo;
+            private string _foo;
             public TestBuilder()
             {
                 Expect("foo", Necessity.Mandatory);
@@ -60,13 +61,13 @@ namespace BuilderSpecification
 
             public TestBuilder SetFoo(string foo)
             {
-                this.foo = Receive("foo", foo);
+                _foo = Receive("foo", foo);
                 return this;
             }
 
             protected override string BuildImplementation()
             {
-                return foo;
+                return _foo;
             }
         }
     }
@@ -88,7 +89,7 @@ namespace BuilderSpecification
 
         private class TestBuilder : Builder<string>
         {
-            private string foo;
+            private string _foo;
 
             public bool GotFoo { get { return Got("foo"); } }
 
@@ -99,13 +100,13 @@ namespace BuilderSpecification
 
             public TestBuilder SetFoo(string foo)
             {
-                this.foo = Receive("foo", foo);
+                _foo = Receive("foo", foo);
                 return this;
             }
 
             protected override string BuildImplementation()
             {
-                return foo ?? "";
+                return _foo ?? "";
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Capgemini.CommonObjectUtils
 {
     /// <summary>
     /// An exception that is thrown when mandatory arguments aren't supplied to sub-classes of
-    /// the <see cref="Builder"/> class before calling the Build method.
+    /// the <see cref="Builder{T}"/> class before calling the Build method.
     /// </summary>
     [Serializable]
     public class MissingBuilderArgumentException : Exception
