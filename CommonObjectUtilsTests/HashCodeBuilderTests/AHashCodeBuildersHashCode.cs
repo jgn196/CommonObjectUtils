@@ -1,22 +1,9 @@
 ﻿using System;
-using Capgemini.CommonObjectUtils;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-// ReSharper disable once CheckNamespace
-namespace HashCodeBuilderSpecification
+namespace Capgemini.CommonObjectUtils.Tests.HashCodeBuilderTests
 {
-    [TestClass]
-    public class AnEmptyHashCodeBuilder
-    {
-        [TestMethod]
-        public void GivesTheInitialOddNumber()
-        {
-            const int initialOddNumber = 7;
-            new HashCodeBuilder(initialOddNumber, 13).GetHashCode().Should().Be(initialOddNumber);
-        }
-    }
-
     [TestClass]
     public class AHashCodeBuildersHashCode
     {

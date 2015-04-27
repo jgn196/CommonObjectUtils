@@ -64,16 +64,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="EqualsBuilderTests.cs" />
+    <Compile Include="BuilderTests\ABuilderWithMandatoryExpectations.cs" />
+    <Compile Include="BuilderTests\ABuilderWithOptionalExpectations.cs" />
+    <Compile Include="EnumerableTests\AnEnumerable.cs" />
+    <Compile Include="EnumerableTests\ANullEnumerable.cs" />
+    <Compile Include="EqualsBuilderTests\AnEmptyEqualsBuilder.cs" />
+    <Compile Include="EqualsBuilderTests\AnEqualsBuilder.cs" />
+    <Compile Include="EqualsBuilderTests\AnEqualsBuilderThatReportsEquality.cs" />
+    <Compile Include="EqualsBuilderTests\AnEqualsBuilderThatReportsInequality.cs" />
+    <Compile Include="ExceptionTests\ANullException.cs" />
+    <Compile Include="HashCodeBuilderTests\AnEmptyHashCodeBuilder.cs" />
     <Compile Include="MemoryPipeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HashCodeBuilderTests.cs" />
+    <Compile Include="HashCodeBuilderTests\AHashCodeBuildersHashCode.cs" />
     <Compile Include="Testing\EqualsTesterTests.cs" />
     <Compile Include="Testing\ErrorTesterTests.cs" />
-    <Compile Include="ToStringBuilderTests.cs" />
-    <Compile Include="EnumerableExtensionsTests.cs" />
-    <Compile Include="ExceptionExtensionsTests.cs" />
-    <Compile Include="BuilderTests.cs" />
+    <Compile Include="ToStringBuilderTests\AToStringBuilder.cs" />
+    <Compile Include="ToStringBuilderTests\AToStringBuilderString.cs" />
+    <Compile Include="EnumerableTests\AnEmptyEnumerable.cs" />
+    <Compile Include="ExceptionTests\AnException.cs" />
+    <Compile Include="BuilderTests\ABuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonObjectUtils\CommonObjectUtils.csproj">
@@ -84,6 +94,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

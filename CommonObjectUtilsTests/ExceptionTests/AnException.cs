@@ -1,11 +1,9 @@
 ﻿using System;
 using System.IO;
-using Capgemini.CommonObjectUtils;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-// ReSharper disable once CheckNamespace
-namespace ExceptionSpecification
+namespace Capgemini.CommonObjectUtils.Tests.ExceptionTests
 {
     [TestClass]
     public class AnException
@@ -39,17 +37,6 @@ namespace ExceptionSpecification
         {
             new IOException().IsOneOf(typeof (ArgumentException), typeof (IOException))
                 .Should().BeTrue();
-        }
-    }
-
-    [TestClass]
-    public class ANullException
-    {
-        [TestMethod]
-        [ExpectedException(typeof (NullReferenceException))]
-        public void ThrowsNullReferenceExceptionWhenIsOneOfIsCalled()
-        {
-            ((Exception) null).IsOneOf(typeof (Exception));
         }
     }
 }
