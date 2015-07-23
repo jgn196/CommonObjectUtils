@@ -71,13 +71,19 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right) where T : IEquatable<T>
         {
-            var leftIsNull = left == null;
-            var areSame = ReferenceEquals(left, right);
-            var result = areSame || !leftIsNull && left.Equals(right);
-
-            _isEqual = _isEqual && result;
+            CommonAppend(left, right, (l, r) => l.Equals(r));
 
             return this;
+        }
+
+        private void CommonAppend<T>(T left, T right, Func<T, T, bool> equalityFunc)
+        {
+            // ReSharper disable once CompareNonConstrainedGenericWithNull
+            var leftIsNull = left == null;
+            var areSame = ReferenceEquals(left, right);
+            var result = areSame || !leftIsNull && equalityFunc(left, right);
+
+            _isEqual = _isEqual && result;
         }
 
         /// <summary>
@@ -98,11 +104,7 @@ namespace Capgemini.CommonObjectUtils
         {
             Condition.Requires(comparer).IsNotNull();
 
-            var leftIsNull = left == null;
-            var areSame = ReferenceEquals(left, right);
-            var result = areSame || !leftIsNull && comparer.Equals(left, right);
-
-            _isEqual = _isEqual && result;
+            CommonAppend(left, right, comparer.Equals);
             
             return this;
         }
@@ -122,6 +124,7 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
+            // ReSharper disable once CompareNonConstrainedGenericWithNull
             CommonAppendMany(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
             
             return this;
