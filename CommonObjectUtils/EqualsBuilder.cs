@@ -98,7 +98,7 @@ namespace Capgemini.CommonObjectUtils
         /// <param name="left">The left hand object.</param>
         /// <param name="right">The right hand object.</param>
         /// <param name="comparer">An implementation of the <c>IEqualityComparer</c> interface that can compare
-        /// elements in the enumerations.</param>
+        /// the objects.</param>
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right, IEqualityComparer<T> comparer)
         {
