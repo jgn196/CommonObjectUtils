@@ -82,6 +82,33 @@ namespace Capgemini.CommonObjectUtils
         }
 
         /// <summary>
+        /// Appends two objects to the list of values to compare and compares them using a supplied comparer.
+        /// </summary>
+        /// <remarks>
+        /// Don't pass arrays, lists or other collections to this method as the top level objects will be compared rather than
+        /// the contents. Instead call <see cref="AppendMany{T}(IEnumerable{T}, IEnumerable{T}, IEqualityComparer{T})"/>.
+        /// </remarks>
+        /// <seealso cref="AppendMany{T}(IEnumerable{T}, IEnumerable{T}, IEqualityComparer{T})"/>
+        /// <typeparam name="T">The type of the objects.</typeparam>
+        /// <param name="left">The left hand object.</param>
+        /// <param name="right">The right hand object.</param>
+        /// <param name="comparer">An implementation of the <c>IEqualityComparer</c> interface that can compare
+        /// elements in the enumerations.</param>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
+        public EqualsBuilder Append<T>(T left, T right, IEqualityComparer<T> comparer)
+        {
+            Condition.Requires(comparer).IsNotNull();
+
+            bool leftIsNull = left == null;
+            bool areSame = ReferenceEquals(left, right);
+            bool result = areSame || !leftIsNull && comparer.Equals(left, right);
+
+            isEqual = isEqual && result;
+            
+            return this;
+        }
+
+        /// <summary>
         /// Appends two enumerable objects that contain the same (<c>IEquatable</c>) type to the list of values 
         /// to compare.
         /// </summary>

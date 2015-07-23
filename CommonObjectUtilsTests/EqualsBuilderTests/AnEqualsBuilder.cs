@@ -103,5 +103,13 @@ namespace Capgemini.CommonObjectUtils.Tests.EqualsBuilderTests
                 throw new NotImplementedException();
             }
         }
+
+        [TestMethod]
+        public void UsesSuppliedComparerWhenAppendingNonEquatables()
+        {
+            GivenAnEqualsBuilder()
+                .Append(new NotEquatable(), new NotEquatable(), new NotEquatableComparer())
+                .IsEquals.Should().BeTrue();
+        }
     }
 }
