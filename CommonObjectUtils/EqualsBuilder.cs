@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using CuttingEdge.Conditions;
 
 namespace Capgemini.CommonObjectUtils
@@ -45,7 +44,7 @@ namespace Capgemini.CommonObjectUtils
         /// This starts off as true and is updated by each Append method.
         /// </para>
         /// </summary>
-        private bool isEqual = true;
+        private bool _isEqual = true;
 
         /// <summary>
         /// Gets a value indicating whether fields were equal.
@@ -55,7 +54,7 @@ namespace Capgemini.CommonObjectUtils
         {
             get
             {
-                return isEqual;
+                return _isEqual;
             }
         }
 
@@ -72,11 +71,11 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right) where T : IEquatable<T>
         {
-            bool leftIsNull = left == null;
-            bool areSame = ReferenceEquals(left, right);
-            bool result = areSame || !leftIsNull && left.Equals(right);
+            var leftIsNull = left == null;
+            var areSame = ReferenceEquals(left, right);
+            var result = areSame || !leftIsNull && left.Equals(right);
 
-            isEqual = isEqual && result;
+            _isEqual = _isEqual && result;
 
             return this;
         }
@@ -99,11 +98,11 @@ namespace Capgemini.CommonObjectUtils
         {
             Condition.Requires(comparer).IsNotNull();
 
-            bool leftIsNull = left == null;
-            bool areSame = ReferenceEquals(left, right);
-            bool result = areSame || !leftIsNull && comparer.Equals(left, right);
+            var leftIsNull = left == null;
+            var areSame = ReferenceEquals(left, right);
+            var result = areSame || !leftIsNull && comparer.Equals(left, right);
 
-            isEqual = isEqual && result;
+            _isEqual = _isEqual && result;
             
             return this;
         }
@@ -123,7 +122,7 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
-            CommonAppendMany<T>(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
+            CommonAppendMany(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
             
             return this;
         }
@@ -133,7 +132,7 @@ namespace Capgemini.CommonObjectUtils
             IEnumerable<T> right,
             Func<T, T, bool> equalityFunc)
         {
-            bool result = true;
+            bool result;
 
             if (ReferenceEquals(left, right))
             {
@@ -145,10 +144,10 @@ namespace Capgemini.CommonObjectUtils
             }
             else
             {
-                result = AreEnumerationsEqual<T>(left, right, equalityFunc);
+                result = AreEnumerationsEqual(left, right, equalityFunc);
             }
 
-            isEqual = isEqual && result;
+            _isEqual = _isEqual && result;
         }
 
         private static bool AreEnumerationsEqual<T>(
@@ -159,10 +158,9 @@ namespace Capgemini.CommonObjectUtils
             var leftEnumerator = left.GetEnumerator();
             var rightEnumerator = right.GetEnumerator();
 
-            int leftCount = 0;
-            int rightCount = 0;
-            var gotAnyItems = false;
-            var gotTwoItems = false;
+            var leftCount = 0;
+            var rightCount = 0;
+            bool gotAnyItems;
             do
             {
                 var gotLeftItem = leftEnumerator.MoveNext();
@@ -172,18 +170,17 @@ namespace Capgemini.CommonObjectUtils
                 rightCount += gotRightItem ? 1 : 0;
 
                 gotAnyItems = gotLeftItem || gotRightItem;
-                gotTwoItems = gotLeftItem && gotRightItem;
+                var gotTwoItems = gotLeftItem && gotRightItem;
 
-                if (gotTwoItems)
+                if (!gotTwoItems) continue;
+
+                var leftItem = leftEnumerator.Current;
+                var rightItem = rightEnumerator.Current;
+                var itemsEqual = equalityFunc(leftItem, rightItem);
+
+                if (!itemsEqual)
                 {
-                    var leftItem = leftEnumerator.Current;
-                    var rightItem = rightEnumerator.Current;
-                    var itemsEqual = equalityFunc(leftItem, rightItem);
-
-                    if (!itemsEqual)
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             } while (gotAnyItems);
 
@@ -211,7 +208,7 @@ namespace Capgemini.CommonObjectUtils
         {
             Condition.Requires(comparer).IsNotNull();
 
-            CommonAppendMany<T>(left, right, (l, r) => comparer.Equals(l, r));
+            CommonAppendMany(left, right, comparer.Equals);
 
             return this;
         }
@@ -223,7 +220,7 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder AppendBase(bool baseEquals)
         {
-            isEqual = isEqual && baseEquals;
+            _isEqual = _isEqual && baseEquals;
 
             return this;
         }
@@ -233,7 +230,7 @@ namespace Capgemini.CommonObjectUtils
         /// </summary>
         public void Reset()
         {
-            isEqual = true;
+            _isEqual = true;
         }
     }
 }
