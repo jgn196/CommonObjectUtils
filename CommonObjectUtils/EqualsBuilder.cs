@@ -71,19 +71,34 @@ namespace Capgemini.CommonObjectUtils
         /// <returns>The EqualsBuilder for chaining calls.</returns>
         public EqualsBuilder Append<T>(T left, T right) where T : IEquatable<T>
         {
-            CommonAppend(left, right, (l, r) => l.Equals(r));
+            Append(left, right, (l, r) => l.Equals(r));
 
             return this;
         }
 
-        private void CommonAppend<T>(T left, T right, Func<T, T, bool> equalityFunc)
+        /// <summary>
+        /// Appends two objects to the list values to compare and compares them using a supplied comparison function.
+        /// </summary>
+        /// <remarks>
+        /// Don't pass arrays, lists or other collections to this method as the top level objects will be compared rather than
+        /// the content. Instead call <see cref="AppendMany{T}(IEnumerable{T}, IEnumerable{T}, Func{T, T, bool})"/>.</remarks>
+        /// <typeparam name="T">The type of the objects.</typeparam>
+        /// <param name="left">The left hand object.</param>
+        /// <param name="right">The right hand object.</param>
+        /// <param name="equalityFunc">The equality comparison function.</param>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
+        public EqualsBuilder Append<T>(T left, T right, Func<T, T, bool> equalityFunc)
         {
+            Condition.Requires(equalityFunc).IsNotNull();
+
             // ReSharper disable once CompareNonConstrainedGenericWithNull
             var leftIsNull = left == null;
             var areSame = ReferenceEquals(left, right);
             var result = areSame || !leftIsNull && equalityFunc(left, right);
 
             _isEqual = _isEqual && result;
+
+            return this;
         }
 
         /// <summary>
@@ -104,7 +119,7 @@ namespace Capgemini.CommonObjectUtils
         {
             Condition.Requires(comparer).IsNotNull();
 
-            CommonAppend(left, right, comparer.Equals);
+            Append(left, right, comparer.Equals);
             
             return this;
         }
@@ -125,12 +140,24 @@ namespace Capgemini.CommonObjectUtils
         public EqualsBuilder AppendMany<T>(IEnumerable<T> left, IEnumerable<T> right) where T : IEquatable<T>
         {
             // ReSharper disable once CompareNonConstrainedGenericWithNull
-            CommonAppendMany(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
+            AppendMany(left, right, (l, r) => ReferenceEquals(l, r) || l != null && l.Equals(r));
             
             return this;
         }
 
-        private void CommonAppendMany<T>(
+        /// <summary>
+        /// Appends two enumerable objects that contain the same type to the list of values to compare.
+        /// </summary>
+        /// <remarks>
+        /// EqualsBuilder will perform a deep comparison of the two enumerable objects.
+        /// Each element pair in the enumerations is compared by calling the equality function.
+        /// </remarks>
+        /// <typeparam name="T">The type the enumerable objects contain.</typeparam>
+        /// <param name="left">The left hand enumerable.</param>
+        /// <param name="right">The right hand enumerable.</param>
+        /// <param name="equalityFunc">The equality comparison function.</param>
+        /// <returns>The EqualsBuilder for chaining calls.</returns>
+        public EqualsBuilder AppendMany<T>(
             IEnumerable<T> left,
             IEnumerable<T> right,
             Func<T, T, bool> equalityFunc)
@@ -151,6 +178,8 @@ namespace Capgemini.CommonObjectUtils
             }
 
             _isEqual = _isEqual && result;
+
+            return this;
         }
 
         private static bool AreEnumerationsEqual<T>(
@@ -211,7 +240,7 @@ namespace Capgemini.CommonObjectUtils
         {
             Condition.Requires(comparer).IsNotNull();
 
-            CommonAppendMany(left, right, comparer.Equals);
+            AppendMany(left, right, comparer.Equals);
 
             return this;
         }

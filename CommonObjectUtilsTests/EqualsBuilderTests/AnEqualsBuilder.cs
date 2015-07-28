@@ -87,6 +87,13 @@ namespace Capgemini.CommonObjectUtils.Tests.EqualsBuilderTests
                     new[] { new NotEquatable() },
                     new NotEquatableComparer())
                 .IsEquals.Should().BeTrue();
+
+            GivenAnEqualsBuilder()
+                .AppendMany(
+                    new[] {new NotEquatable()},
+                    new[] {new NotEquatable()},
+                    (x, y) => new NotEquatableComparer().Equals(x, y))
+                .IsEquals.Should().BeTrue();
         }
 
         private class NotEquatable { }
@@ -110,6 +117,9 @@ namespace Capgemini.CommonObjectUtils.Tests.EqualsBuilderTests
             GivenAnEqualsBuilder()
                 .Append(new NotEquatable(), new NotEquatable(), new NotEquatableComparer())
                 .IsEquals.Should().BeTrue();
+
+            GivenAnEqualsBuilder()
+                .Append(new NotEquatable(), new NotEquatable(), (x, y) => new NotEquatableComparer().Equals(x, y));
         }
     }
 }

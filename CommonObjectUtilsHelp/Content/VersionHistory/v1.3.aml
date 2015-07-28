@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="162cc9fd-3a55-4aaa-82ca-4226b67d0e92" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.3 was released on 28/07/2015.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>
+              Added an Append methods to the EqualsBuilder to support comparing objects that don't implement IEquatable.
+            </para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="0d3dedc1-b281-4e16-8027-fcd5bcdd6452" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
