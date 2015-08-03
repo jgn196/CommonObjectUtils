@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2014.5.31.0" projectFile="D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\CommonObjectUtilsHelp.shfbproj" started="04/03/2015 21:22:00">
+<shfbBuild product="Sandcastle Help File Builder" version="2014.5.31.0" projectFile="D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\CommonObjectUtilsHelp.shfbproj" started="28/07/2015 20:56:05">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
 Locating components in the following folder(s):
-   D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp
+   D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp
 Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
 Loading and initializing plug-ins...
 Lightweight Website Style Version 2014.5.31.0
@@ -13,32 +13,32 @@ Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtils\CommonObjectUtils.csproj
-    Found project &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtils\CommonObjectUtils.csproj&#39;
+Source: D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtils\CommonObjectUtils.csproj
+    Found project &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtils\CommonObjectUtils.csproj&#39;
 
 Parsing project files
-    Found assembly &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtils\bin\Debug\Capgemini.CommonObjectUtils.dll&#39;
+    Found assembly &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtils\bin\Debug\Capgemini.CommonObjectUtils.dll&#39;
 
 References to include (excluding framework assemblies):
     CuttingEdge.Conditions
 
 Copying XML comments files
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtils\bin\Debug\Capgemini.CommonObjectUtils.XML -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Capgemini.CommonObjectUtils.XML
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtils\bin\Debug\Capgemini.CommonObjectUtils.XML -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Capgemini.CommonObjectUtils.XML
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0080
+</plugIn>    Last step completed in 00:00:00.0040
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 04/03/2015 21:22:01.
-Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 28/07/2015 19:56:06.
+Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
 GenerateRefInfo:
@@ -46,24 +46,24 @@ GenerateRefInfo:
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Loaded 1 assemblies for reflection and 2 dependency assemblies.
-  Wrote information on 2 namespaces, 12 types, and 47 members
+  Wrote information on 2 namespaces, 13 types, and 54 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
-Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateRefInfo.proj&quot; (default targets).
+Done Building Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\GenerateRefInfo.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.53
-    Last step completed in 00:00:00.6240
+Time Elapsed 00:00:01.53
+    Last step completed in 00:00:01.7551
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 04/03/2015 21:22:02.
-Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 28/07/2015 19:56:07.
+Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
@@ -78,16 +78,16 @@ TransformManifest:
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\TransformManifest.proj&quot; (default targets).
+Done Building Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\TransformManifest.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.43
-    Last step completed in 00:00:00.5380
+Time Elapsed 00:00:00.77
+    Last step completed in 00:00:00.8771
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.1260
+    Last step completed in 00:00:00.0330
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -96,239 +96,236 @@ Checking for other token files...
 Checking for code snippets files...
 Copying images and creating the media map file...
 Generating conceptual topic files
-    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\Welcome.aml&#39;
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\Welcome.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\dcab8a25-c58b-43a3-ba17-28ec080e8ca4.xml
-    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\VersionHistory.aml&#39;
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\VersionHistory.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\0d3dedc1-b281-4e16-8027-fcd5bcdd6452.xml
-    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.0.aml&#39;
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.0.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\7bcc2781-362c-45c5-b568-703b27eb172f.xml
-    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml&#39;
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\1510b232-6f98-4cd7-8f8e-4ebe5adfea2b.xml
-    Parsing topic file &#39;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml&#39;
-    D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\336ff80d-92bc-4b11-8309-2e61b2364e9f.xml
-    Last step completed in 00:00:00.0880
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\Welcome.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\Welcome.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\dcab8a25-c58b-43a3-ba17-28ec080e8ca4.xml
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\VersionHistory.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\VersionHistory.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\0d3dedc1-b281-4e16-8027-fcd5bcdd6452.xml
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.0.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.0.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\7bcc2781-362c-45c5-b568-703b27eb172f.xml
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.1.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\1510b232-6f98-4cd7-8f8e-4ebe5adfea2b.xml
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.2.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\336ff80d-92bc-4b11-8309-2e61b2364e9f.xml
+    Parsing topic file &#39;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.3.aml&#39;
+    D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Content\VersionHistory\v1.3.aml -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\ddueXml\162cc9fd-3a55-4aaa-82ca-4226b67d0e92.xml
+    Last step completed in 00:00:00.1010
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     ConceptualManifest.xml
-    Last step completed in 00:00:00.0050
+    Last step completed in 00:00:00.0170
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
-D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\icons\Help.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00.0110
+D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\icons\Help.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\Help.png
+    Last step completed in 00:00:00.0080
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0040
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 04/03/2015 21:22:02.
-Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 28/07/2015 19:56:09.
+Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
-Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
+Done Building Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.13
+Time Elapsed 00:00:00.19
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.2370
+    Last step completed in 00:00:00.2860
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
     conceptual.config
-    Last step completed in 00:00:00.1280
+    Last step completed in 00:00:00.1340
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\sandcastle.config
-D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\conceptual.config
+D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\sandcastle.config
+D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\conceptual.config
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.1760
+    Last step completed in 00:00:00.0540
 </buildStep>
 <buildStep step="BuildConceptualTopics">
 Building conceptual help topics...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 04/03/2015 21:22:03.
-Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; on node 1 (default targets).
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 28/07/2015 19:56:09.
+Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; on node 1 (default targets).
 BuildConceptualTopics:
   BuildAssembler (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 5 topic(s)
+  Processed 6 topic(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
-Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; (default targets).
+Done Building Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\BuildConceptualTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.37
-    Last step completed in 00:00:04.6013
+Time Elapsed 00:00:05.16
+    Last step completed in 00:00:05.3273
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
-Build started 04/03/2015 21:22:08.
-Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 28/07/2015 19:56:14.
+Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2014.5.31.0)
   Copyright &#184; 2006-2014, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-BuildAssembler : warning : ResolveReferenceLinksComponent: [N:Capgemini.CommonObjectUtils] Unknown reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [N:Capgemini.CommonObjectUtils] Invalid reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Capgemini.CommonObjectUtils.MissingBuilderArgumentException] Unknown reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Capgemini.CommonObjectUtils.MissingBuilderArgumentException] Invalid reference link target &#39;!:Builder&#39;. [D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj]
-  Processed 83 topic(s)
-  4 warning(s)
+  Processed 94 topic(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 2 of 30.
-Done Building Project &quot;D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj&quot; (default targets).
+Done Building Project &quot;D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\BuildReferenceTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:09.33
-    Last step completed in 00:00:09.4465
+Time Elapsed 00:00:10.90
+    Last step completed in 00:00:11.0826
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:00.0630
+    Last step completed in 00:00:00.0770
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
-[C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
 Sandcastle Help File Builder, version 2014.5.31.0
 Copyright &#184; 2006-2014, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
-Processing website files in D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website
-Processed 88 HTML files
+Processing website files in D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website
+Processed 100 HTML files
 Sorting keywords and generating See Also indices
-Saving website keyword index to D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\WebKI.xml
-Saving website table of contents to D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00.3430
+Saving website keyword index to D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\WebKI.xml
+Saving website table of contents to D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\WebTOC.xml
+    Last step completed in 00:00:00.4270
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertCaution.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertNote.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertSecurity.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\CFW.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\CodeExample.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\favicon.ico
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protoperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\puboperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\SectionCollapsed.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\SectionExpanded.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\slMobile.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\static.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\xna.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\branding.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-cs-CZ.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-de-DE.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-en-US.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-es-ES.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-fr-FR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Help1.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help2.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Help2.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-HelpViewer.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-it-IT.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ja-JP.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ko-KR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-pl-PL.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-pt-BR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ru-RU.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-tr-TR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Website.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-zh-CN.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-zh-TW.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\index.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\search.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.aspx
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.inc.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\Web.Config
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\Search.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocClose.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocCollapsed.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocExpanded.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocOpen.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\branding-Website.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; D:\Users\jonash\Documents\Visual Studio 2012\Projects\CommonObjecUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00.5290
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help2.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Help2.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\styles\branding.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\index.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\search.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.aspx
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.inc.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\SearchHelp.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\Web.Config
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\Search.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocClose.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocCollapsed.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocExpanded.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\icons\TocOpen.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\branding-Website.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; D:\Users\jonash\Software Projects\CommonObjectUtils\CommonObjectUtilsHelp\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
+    Last step completed in 00:00:00.3350
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00.3570
+</plugIn>    Last step completed in 00:00:00.3290
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 100 files
 Copied 200 files
-Copied 219 files for the website content
-    Last step completed in 00:00:00.2330
+Copied 235 files for the website content
+    Last step completed in 00:00:00.2070
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0640
+    Last step completed in 00:00:00.0650
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 03/04/2015 09:22 PM.  Total time: 00:00:18.1510
+Build completed successfully at 07/28/2015 08:56 PM.  Total time: 00:00:21.7192
 
 </buildStep>
 </shfbBuild>
