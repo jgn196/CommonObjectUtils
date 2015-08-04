@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Capgemini.CommonObjectUtils</id>
-    <version>1.2.1</version>
+    <version>1.3</version>
     <title>CommonObjectUtils</title>
     <authors>John Nash</authors>
     <owners>John Nash</owners>
@@ -11,10 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .Net class library to make writing common object methods quicker and more consistent.</description>
     <releaseNotes>
-		Added an AppendMany method to the HashCodeBuilder to support hashing based on member enumerations.
-		Fixed a bug where passing null to EqualsBuilder.Append caused a NullReferenceException.
-		Added a new AppendMany overload to the EqualsBuilder to support comparing enumerations of objects that don't implement IEquatable.
-		Eliminated repeat enumerations in EqualsBuilder.AppendMany.
+		Version 1.3 adds more methods to EqualsBuilder for comparing objects that don't implement IEquatable.
 	</releaseNotes>
     <copyright>Copyright 2015</copyright>
   </metadata>
